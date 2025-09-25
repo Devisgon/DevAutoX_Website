@@ -578,24 +578,6 @@ const cyber= [
 <Link href="/contact" className="hover:underline">
   Contact Us
 </Link>  
-            // <a href="/" className="hover:underline">
-                //   Home
-                // </a>
-                // <a href="/about" className="hover:underline">
-                //   About Us
-                // </a>
-                // <a href="/services" className="hover:underline">
-                //   Services
-                // </a>
-                // <a href="/portfolio" className="hover:underline">
-                //   Portfolio/Case Studies
-                // </a>
-                // <a href="/blogs" className="hover:underline">
-                //   Blogs/Resources
-                // </a>
-                // <a href="/contact" className="hover:underline">
-                //   Contact Us
-                // </a>
               </nav>
             </div>
 
