@@ -1,4 +1,24 @@
 @import "tailwindcss";
+/* Hexagon-like box shape with fixed dimensions */
+.clip-hex {
+  width: 200px; /* adjust as needed */
+  height: 260px; /* adjust as needed */
+  background: linear-gradient(to bottom, #E8FAFF, #9FDDEF);
+  clip-path: polygon(
+    50% 0%,   /* top middle (triangle peak) */
+    100% 15%, /* right slant */
+    100% 100%, /* bottom right */
+    0% 100%,   /* bottom left */
+    0% 15%     /* left slant */
+  );
+  border-radius: 16px; /* keeps corners smooth like your image */
+}
+
+/* add this to your global CSS */
+html, body {
+  overflow-x: hidden;
+}
+
 
 :root {
   --background: #ffffff;
