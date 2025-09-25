@@ -191,30 +191,32 @@ const cardData = [
 </section>
 
 {/* who we are */}
-<section className="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 py-12 bg-white">
-      {/* Left Text Section */}
-      <div className="md:w-1/2 w-full mt-8 md:mt-0">
-        <h2 className="text-[30px] font-semibold font-['Lexend'] text-gray-900 mb-4">
-          Who We Are?
-        </h2>
-        <p className="text-[17px] font-medium font-['Poppins'] text-black leading-relaxed">
-          At DevAutoX, we are a team of passionate innovators with bold ideas, dedicated to building custom digital solutions that empower businesses to grow. Our focus is on crafting technology that not only works but works smart, creating scalable systems tailored to client needs.
-          <br /><br />
-          Our approach is simple: we listen to clients, understand their unique challenges, and deliver technology that transforms the way they work. Our focus on speed, quality, and a user-first design ensures every project is impactful. We are proud of our track record of successful projects and satisfied clients, which stands as proof of the value we deliver.
-        </p>
-      </div>
+<section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 bg-white">
+  {/* Left Text Section */}
+  <div className="md:w-1/2 w-full order-1 md:order-1 mt-8 md:mt-0">
+    <h2 className="text-[30px] font-semibold font-['Lexend'] text-gray-900 mb-4">
+      Who We Are?
+    </h2>
+    <p className="text-[17px] font-medium font-['Poppins'] text-black leading-relaxed">
+      At DevAutoX, we are a team of passionate innovators with bold ideas, dedicated to building custom digital solutions that empower businesses to grow. Our focus is on crafting technology that not only works but works smart, creating scalable systems tailored to client needs.
+      <br /><br />
+      Our approach is simple: we listen to clients, understand their unique challenges, and deliver technology that transforms the way they work. Our focus on speed, quality, and a user-first design ensures every project is impactful. We are proud of our track record of successful projects and satisfied clients, which stands as proof of the value we deliver.
+    </p>
+  </div>
 
-      {/* Right Image Section */}
-      <div className="md:w-1/2 w-full flex justify-center">
-        <Image
-          src="/images/persons.png" // Replace with your actual gallery path
-          alt="DevAutoX Team Illustration"
-          width={455}
-          height={456}
-          className="object-contain max-w-full h-auto"
-        />
-      </div>
-    </section>
+  {/* Right Image Section */}
+  <div className="md:w-1/2 w-full flex justify-center max-sm:pt-5 order-2 md:order-2">
+    <Image
+      src="/images/persons.png" // Replace with your actual gallery path
+      alt="DevAutoX Team Illustration"
+      width={455}
+      height={456}
+      className="object-contain max-w-full h-auto"
+    />
+  </div>
+</section>
+
+ 
 
 {/* mission */}
 <section className="py-12 px-4 md:px-16 bg-[#EDFBFF]">
