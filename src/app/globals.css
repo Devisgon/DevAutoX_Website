@@ -11,10 +11,11 @@
     0% 100%,   /* bottom left */
     0% 15%     /* left slant */
   );
-  border-radius: 16px; /* keeps corners smooth like your image */
+   border-radius: 16px;
+ /* keeps corners smooth like your image */
 }
 
-/* add this to your global CSS */
+/* global CSS */
 html, body {
   overflow-x: hidden;
 }
