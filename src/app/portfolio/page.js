@@ -1,4 +1,4 @@
-"use client"; // 👈 needed for hooks in app router
+"use client"; //  needed for hooks in app router
 
 import Image from "next/image";
 import Link from "next/link";
@@ -18,7 +18,8 @@ const [openIndex, setOpenIndex] = useState(1); // Default open: Backend
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
-    { name: "Portfolio / Client Reviews", path: "/portfolio" },
+    { name: "Portfolio", path: "/portfolio" },
+     { name: "Testimonials", path: "#testimonials" },
     { name: "Contact Us", path: "/contact" },
   ];
 
@@ -48,12 +49,15 @@ const testimonials = [
 <nav className="absolute top-0 left-0 w-full flex items-center px-6 py-4 z-20 bg-white font-poppins">
   {/* Logo */}
   <div className="flex pl-13 max-sm:pl-1 items-center">
-    <Image
-      src="/images/logo.png"
-      alt="DevAutoX Logo"
-      width={59}
-      height={46}
-    />
+   <Link href="/" passHref>
+  <Image
+    src="/optimized-images/logo.webp"
+    alt="DevAutoX Logo"
+    width={59}
+    height={46}
+    className="cursor-pointer"
+  />
+</Link>
     <span className="ml-2 font-bold text-[18px] text-black"></span>
   </div>
 
@@ -106,12 +110,15 @@ const testimonials = [
       {/* Top bar inside menu with logo + close button */}
       <div className="w-full flex items-center justify-between">
         <div className="flex items-center">
-          <Image
-            src="/images/logo.png"
-            alt="DevAutoX Logo"
-            width={59}
-            height={46}
-          />
+          <Link href="/" passHref>
+  <Image
+    src="/optimized-images/logo.webp"
+    alt="DevAutoX Logo"
+    width={59}
+    height={46}
+    className="cursor-pointer"
+  />
+</Link>
           <span className="ml-2 font-bold text-[18px] text-black"></span>
         </div>
         <button
@@ -435,6 +442,7 @@ const testimonials = [
 
 
             {/* testimonials */}
+            <section id="testimonials">
 <section className="w-full bg-white px-6 py-9">
   <h2 className="text-center text-[30px] font-bold font-lexend text-black mb-4">
     What Our Clients Say
@@ -501,19 +509,22 @@ const testimonials = [
     </div>
   </div>
 </section>
+</section>
 {/* footer */}
       <footer className="bg-[#E8FAFF] text-black px-6 py-10 md:px-20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
           {/* Left Section */}
           <div className="flex-1">
             {/* Logo */}
-            <Image
-              src="/images/bottom-logo.png" // gallery asset
-              alt="DevAutoX Logo"
-              width={180}
-              height={31}
-              className="mb-4"
-            />
+          <Link href="/" passHref>
+  <Image
+    src="/optimized-images/bottom-logo.webp"
+    alt="DevAutoX Logo"
+    width={180}
+    height={31}
+    className="cursor-pointer"
+  />
+</Link>
 
             {/* Description */}
             <p className="text-[12px] font-medium whitespace-nowrap font-Poppins mb-2">
@@ -569,10 +580,10 @@ const testimonials = [
   Services
 </Link>
 <Link href="/portfolio" className="hover:underline">
-  Portfolio/Case Studies
+  Portfolio
 </Link>
-<Link href="/blogs" className="hover:underline">
-  Blogs/Resources
+<Link href="/portfolio#testimonials" className="hover:underline">
+  Testimonials
 </Link>
 <Link href="/contact" className="hover:underline">
   Contact Us

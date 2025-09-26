@@ -3,7 +3,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // ✅ instead of next/router
+import { usePathname } from "next/navigation"; // instead of next/router
 import { useState } from "react";
 import { Poppins, Lexend } from "next/font/google";
 
@@ -15,7 +15,8 @@ export default function About() {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
-    { name: "Portfolio / Client Reviews", path: "/portfolio" },
+    { name: "Portfolio", path: "/portfolio" },
+     { name: "Testimonials", path: "/portfolio#testimonials" },
     { name: "Contact Us", path: "/contact" },
   ];
 // card data
@@ -72,12 +73,15 @@ const cardData = [
 <nav className="absolute top-0 left-0 w-full flex items-center px-6 py-4 z-20 bg-white font-poppins">
   {/* Logo */}
   <div className="flex pl-13 max-sm:pl-1 items-center">
-    <Image
-      src="/images/logo.png"
-      alt="DevAutoX Logo"
-      width={59}
-      height={46}
-    />
+    <Link href="/" passHref>
+  <Image
+    src="/optimized-images/logo.webp"
+    alt="DevAutoX Logo"
+    width={59}
+    height={46}
+    className="cursor-pointer"
+  />
+</Link>
     <span className="ml-2 font-bold text-[18px] text-black"></span>
   </div>
 
@@ -130,12 +134,15 @@ const cardData = [
       {/* Top bar inside menu with logo + close button */}
       <div className="w-full flex items-center justify-between">
         <div className="flex items-center">
-          <Image
-            src="/images/logo.png"
-            alt="DevAutoX Logo"
-            width={59}
-            height={46}
-          />
+         <Link href="/" passHref>
+  <Image
+    src="/optimized-images/logo.webp"
+    alt="DevAutoX Logo"
+    width={59}
+    height={46}
+    className="cursor-pointer"
+  />
+</Link>
           <span className="ml-2 font-bold text-[18px] text-black"></span>
         </div>
         <button
@@ -197,7 +204,7 @@ const cardData = [
     <h2 className="text-[30px] font-semibold font-['Lexend'] text-gray-900 mb-4">
       Who We Are?
     </h2>
-    <p className="text-[17px] font-medium font-['Poppins'] text-black leading-relaxed">
+    <p className="text-[17px] font-medium justify-left font-['Poppins'] text-black leading-relaxed">
       At DevAutoX, we are a team of passionate innovators with bold ideas, dedicated to building custom digital solutions that empower businesses to grow. Our focus is on crafting technology that not only works but works smart, creating scalable systems tailored to client needs.
       <br /><br />
       Our approach is simple: we listen to clients, understand their unique challenges, and deliver technology that transforms the way they work. Our focus on speed, quality, and a user-first design ensures every project is impactful. We are proud of our track record of successful projects and satisfied clients, which stands as proof of the value we deliver.
@@ -252,7 +259,7 @@ const cardData = [
         <h2 className="text-[14px] font-semibold font-lexend mb-2">
           {card.heading}
         </h2>
-        <p className="text-[12px] font-regular font-poppins mb-2">
+        <p className="text-[12px] font-regular justify-center font-poppins mb-2">
           {card.subheading}
         </p>
         <Image
@@ -342,7 +349,7 @@ const cardData = [
   <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
     {/* Left Text Section */}
     <div className="md:w-1/2 flex flex-col items-start text-left">
-     <p className="text-[16px] sm:text-[18px] font-medium font-poppins text-black leading-relaxed max-sm:leading-[1.8] px-2 sm:px-6">
+     <p className="text-[16px] sm:text-[18px] font-medium justify-text font-poppins text-black leading-relaxed max-sm:leading-[1.8] px-2 sm:px-6">
   Our values are the foundation of our work. We are driven by <strong>Innovation,</strong> 
   always seeking new ways to solve complex challenges. We are committed 
   to <strong>Quality,</strong> ensuring every solution is reliable and built for long-term 
@@ -384,13 +391,15 @@ const cardData = [
           {/* Left Section */}
           <div className="flex-1">
             {/* Logo */}
-            <Image
-              src="/images/bottom-logo.png" // gallery asset
-              alt="DevAutoX Logo"
-              width={180}
-              height={31}
-              className="mb-4"
-            />
+           <Link href="/" passHref>
+  <Image
+    src="/optimized-images/bottom-logo.webp"
+    alt="DevAutoX Logo"
+    width={180}
+    height={31}
+    className="cursor-pointer"
+  />
+</Link>
 
             {/* Description */}
             <p className="text-[12px] font-medium whitespace-nowrap font-Poppins mb-2">
@@ -446,10 +455,10 @@ const cardData = [
   Services
 </Link>
 <Link href="/portfolio" className="hover:underline">
-  Portfolio/Case Studies
+  Portfolio
 </Link>
-<Link href="/blogs" className="hover:underline">
-  Blogs/Resources
+<Link href="/portfolio#testimonials" className="hover:underline">
+  Testimonials
 </Link>
 <Link href="/contact" className="hover:underline">
   Contact Us

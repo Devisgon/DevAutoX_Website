@@ -13,7 +13,8 @@ export default function About() {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
-    { name: "Portfolio / Client Reviews", path: "/portfolio" },
+    { name: "Portfolio", path: "/portfolio" },
+     { name: "Testimonials", path: "/portfolio#testimonials" },
     { name: "Contact Us", path: "/contact" },
   ];
 
@@ -23,12 +24,15 @@ export default function About() {
       <nav className="absolute top-0 left-0 w-full flex items-center px-6 py-4 z-20 bg-white font-poppins">
         {/* Logo */}
         <div className="flex pl-13 max-sm:pl-1 items-center">
-          <Image
-            src="/images/logo.png"
-            alt="DevAutoX Logo"
-            width={59}
-            height={46}
-          />
+          <Link href="/" passHref>
+  <Image
+    src="/optimized-images/logo.webp"
+    alt="DevAutoX Logo"
+    width={59}
+    height={46}
+    className="cursor-pointer"
+  />
+</Link>
           <span className="ml-2 font-bold text-[18px] text-black"></span>
         </div>
 
@@ -81,12 +85,15 @@ export default function About() {
             {/* Top bar inside menu with logo + close button */}
             <div className="w-full flex items-center justify-between">
               <div className="flex items-center">
-                <Image
-                  src="/images/logo.png"
-                  alt="DevAutoX Logo"
-                  width={59}
-                  height={46}
-                />
+                <Link href="/" passHref>
+  <Image
+    src="/optimized-images/logo.webp"
+    alt="DevAutoX Logo"
+    width={59}
+    height={46}
+    className="cursor-pointer"
+  />
+</Link>
                 <span className="ml-2 font-bold text-[18px] text-black"></span>
               </div>
               <button
@@ -243,13 +250,15 @@ export default function About() {
           {/* Left Section */}
           <div className="flex-1">
             {/* Logo */}
-            <Image
-              src="/images/bottom-logo.png" // gallery asset
-              alt="DevAutoX Logo"
-              width={180}
-              height={31}
-              className="mb-4"
-            />
+            <Link href="/" passHref>
+  <Image
+    src="/optimized-images/logo.webp"
+    alt="DevAutoX Logo"
+    width={180}
+    height={31}
+    className="cursor-pointer"
+  />
+</Link>
 
             {/* Description */}
             <p className="text-[12px] font-medium whitespace-nowrap font-Poppins mb-2">
@@ -304,10 +313,10 @@ export default function About() {
                   Services
                 </Link>
                 <Link href="/portfolio" className="hover:underline">
-                  Portfolio/Case Studies
+                  Portfolio
                 </Link>
-                <Link href="/blogs" className="hover:underline">
-                  Blogs/Resources
+                <Link href="/portfolio#testimonials" className="hover:underline">
+                 Testimonials
                 </Link>
                 <Link href="/contact" className="hover:underline">
                   Contact Us

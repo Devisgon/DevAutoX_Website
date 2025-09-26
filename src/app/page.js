@@ -25,7 +25,8 @@ export default function Home() {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
-    { name: "Portfolio / Client Reviews", path: "/portfolio" },
+    { name: "Portfolio", path: "/portfolio" },
+     { name: "Testimonials", path: "/portfolio#testimonials" },
     { name: "Contact Us", path: "/contact" },
   ];
 
@@ -88,12 +89,15 @@ export default function Home() {
       <nav className="absolute top-0 left-0 w-full flex items-center px-6 py-4 z-20 bg-transparent font-poppins">
         {/* Logo */}
         <div className="flex pl-13 max-sm:pl-1 items-center">
-          <Image
-            src="/optimized-images/logo.webp"
-            alt="DevAutoX Logo"
-            width={59}
-            height={46}
-          />
+          <Link href="/" passHref>
+  <Image
+    src="/optimized-images/logo.webp"
+    alt="DevAutoX Logo"
+    width={59}
+    height={46}
+    className="cursor-pointer"
+  />
+</Link>
           <span className="ml-2 font-bold text-[18px] text-black"></span>
         </div>
 
@@ -146,12 +150,15 @@ export default function Home() {
             {/* Top bar inside menu with logo + close button */}
             <div className="w-full flex items-center justify-between">
               <div className="flex items-center">
-                <Image
-                  src="/optimized-images/logo.webp"
-                  alt="DevAutoX Logo"
-                  width={59}
-                  height={46}
-                />
+                <Link href="/" passHref>
+  <Image
+    src="/optimized-images/logo.webp"
+    alt="DevAutoX Logo"
+    width={59}
+    height={46}
+    className="cursor-pointer"
+  />
+</Link>
                 <span className="ml-2 font-bold text-[18px] text-black"></span>
               </div>
               <button
@@ -227,11 +234,13 @@ export default function Home() {
           
           </p>
 
-          <button
-            className={`bg-white text-black font-bold text-[18px] py-3 px-6 rounded-full shadow hover:shadow-lg transition font-inter max-sm:text-[16px]`}
-          >
-            Let’s Build Together
-          </button>
+         <Link href="/contact">
+  <button
+    className="bg-white text-black font-bold text-[18px] py-3 px-6 rounded-full shadow hover:shadow-lg transition font-inter max-sm:text-[16px]"
+  >
+    Let’s Build Together
+  </button>
+</Link>
         </div>
       </section>
 
@@ -258,7 +267,7 @@ export default function Home() {
           <h3 className="text-[14px] text-center whitespace-nowrap font-bold font-lexend text-black mb-2">
             {service.title}
           </h3>
-          <p className="text-[12px] text-black text-center leading-relaxed font-poppins">
+          <p className="text-[12px] text-black text-center justify-center leading-relaxed font-poppins">
             {service.desc}
           </p>
         </div>
@@ -266,7 +275,7 @@ export default function Home() {
         {/* Learn More Link */}
         <Link
           href={service.link}
-          className="mt-4 text-sm font-semibold font-poppins underline underline-offset-2 text-black hover:text-gray-700"
+          className="mt-4 text-sm font-semibold font-poppins max-sm:text-center underline underline-offset-2 text-black hover:text-gray-700"
         >
           Learn More
         </Link>
@@ -584,13 +593,15 @@ export default function Home() {
           {/* Left Section */}
           <div className="flex-1">
             {/* Logo */}
-            <Image
-              src="/optimized-images/bottom-logo.webp" // gallery asset
-              alt="DevAutoX Logo"
-              width={180}
-              height={31}
-              className="mb-4"
-            />
+            <Link href="/" passHref>
+  <Image
+    src="/optimized-images/bottom-logo.webp"
+    alt="DevAutoX Logo"
+    width={180}
+    height={31}
+    className="cursor-pointer"
+  />
+</Link>
 
             {/* Description */}
             <p className="text-[12px] font-medium whitespace-nowrap font-[Poppins] mb-2">
@@ -646,10 +657,10 @@ export default function Home() {
   Services
 </Link>
 <Link href="/portfolio" className="hover:underline">
-  Portfolio/Case Studies
+  Portfolio
 </Link>
-<Link href="/blogs" className="hover:underline">
-  Blogs/Resources
+<Link href="/portfolio#testimonials" className="hover:underline">
+  Testimonials
 </Link>
 <Link href="/contact" className="hover:underline">
   Contact Us
