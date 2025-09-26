@@ -34,19 +34,19 @@ export default function Home() {
     {
       title: "Web & App Development",
       desc: "Building fast, intuitive, and innovative web and app experiences for your digital growth.",
-      icon: "/images/webapp.png",
+      icon: "/optimized-images/webapp.webp",
       link: "/services/#web", // unique link
     },
     {
       title: "Automation & AI Tools",
       desc: "Optimizing processes with smart tools that save time, improve accuracy, and increase efficiency.",
-      icon: "/images/ai1.png",
+      icon: "/optimized-images/ai1.webp",
       link: "/services/#automation",
     },
     {
       title: "API Integrations",
       desc: "Connecting your systems seamlessly to enable smarter, unified operations with greater flexibility.",
-      icon: "/images/api4.png",
+      icon: "/optimized-images/api4.webp",
       link: "/services/#api",
     },
     {
@@ -57,13 +57,13 @@ export default function Home() {
         </>
       ),
       desc: "Delivering secure, scalable, and reliable infrastructure to power your business growth and success.",
-      icon: "/images/cloud4.png",
+      icon: "/optimized-images/cloud4.webp",
       link: "/services/#cloud",
     },
     {
       title: "Cyber Security",
       desc: "Delivering complete end-to-end protection for data, systems, users, and digital assets.",
-      icon: "/images/cyber4.png",
+      icon: "/optimized-images/cyber4.webp",
       link: "/services/#cyber",
     },
   ];
@@ -89,7 +89,7 @@ export default function Home() {
         {/* Logo */}
         <div className="flex pl-13 max-sm:pl-1 items-center">
           <Image
-            src="/images/logo.png"
+            src="/optimized-images/logo.webp"
             alt="DevAutoX Logo"
             width={59}
             height={46}
@@ -147,7 +147,7 @@ export default function Home() {
             <div className="w-full flex items-center justify-between">
               <div className="flex items-center">
                 <Image
-                  src="/images/logo.png"
+                  src="/optimized-images/logo.webp"
                   alt="DevAutoX Logo"
                   width={59}
                   height={46}
@@ -193,7 +193,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute bg-white inset-0 -z-10">
           <Image
-            src="/images/hero-bg.png"
+            src="/optimized-images/hero-bg.webp"
             alt="Background"
             fill
             style={{ objectFit: "cover" }}
@@ -301,14 +301,14 @@ export default function Home() {
   {/* Card 1 */}
   <div className="relative w-[300px] h-[255px]  md:pl-29 flex flex-col items-center justify-center text-center p-1 md:pr-2">
     <Image
-      src="/images/Polygon.png"
+      src="/optimized-images/Polygon.webp"
       alt="Card Background"
       fill
       className="object-contain md:pl-29 absolute inset-0"
     />
     <div className="relative z-10 flex flex-col items-center">
       <Image
-        src="/images/speed.png"
+        src="/optimized-images/speed.webp"
         alt="Speed Icon"
         width={26}
         height={26}
@@ -329,14 +329,14 @@ export default function Home() {
   {/* Card 2 */}
   <div className="relative w-[300px] h-[245px] max-sm:h-[255px] max-sm:w-[300px] flex flex-col items-center justify-center text-center p-4 md:px-1">
     <Image
-      src="/images/Polygon.png"
+      src="/optimized-images/Polygon.webp"
       alt="Card Background"
       fill
       className="object-contain absolute inset-0"
     />
     <div className="relative z-10   mt-4 flex flex-col items-center">
       <Image
-        src="/images/quality.png"
+        src="/optimized-images/quality.webp"
         alt="Quality Icon"
         width={26}
         height={26}
@@ -354,14 +354,14 @@ export default function Home() {
   {/* Card 3 */}
   <div className="relative w-[300px] h-[255px] md:pr-29 gap-y-6  flex flex-col items-center justify-center text-center p-4 md:pl-2">
     <Image
-      src="/images/Polygon.png"
+      src="/optimized-images/Polygon.webp"
       alt="Card Background"
       fill
       className="object-contain md:pr-29 absolute inset-0"
     />
     <div className="relative z-10 flex flex-col items-center">
       <Image
-        src="/images/user.png"
+        src="/optimized-images/user.webp"
         alt="User Icon"
         width={26}
         height={26}
@@ -385,7 +385,7 @@ export default function Home() {
       <section
         className="relative w-full py-12 px-4 flex flex-col items-center justify-center"
         style={{
-          backgroundImage: "url('/images/bg-1.png')", // replace with your bg image path
+          backgroundImage: "url('/optimized-images/bg-1.webp')", // replace with your bg image path
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -415,26 +415,26 @@ export default function Home() {
           <div className="hidden md:flex flex-wrap justify-center gap-x-10 gap-y-8">
             <div className="flex flex-col sm:flex-row items-center gap-12">
               <Image
-                src="/images/next.png"
+                src="/optimized-images/next.webp"
                 alt="Next.js"
                 width={70}
                 height={40}
               />
               <Image
-                src="/images/node.png"
+                src="/optimized-images/node.webp"
                 alt="Node.js"
                 width={90}
                 height={19}
               />
               <Image
-                src="/images/python.png"
+                src="/optimized-images/python.webp"
                 alt="Python"
                 width={90}
                 height={19}
               />
               <Image src="/images/odoo.png" alt="Odoo" width={90} height={19} />
               <Image
-                src="/images/cursor.png"
+                src="/optimized-images/cursor.webp"
                 alt="Cursor"
                 width={70}
                 height={40}
@@ -444,7 +444,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center gap-8">
               <div className="flex items-center gap-2">
                 <Image
-                  src="/images/ai-driven.png"
+                  src="/optimized-images/ai-driven.webp"
                   alt="AI-driven Analytics"
                   width={116}
                   height={53}
@@ -457,7 +457,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-2">
                 <Image
-                  src="/images/custom.png"
+                  src="/optimized-images/custom.webp"
                   alt="Custom APIs"
                   width={144}
                   height={58}
@@ -478,19 +478,19 @@ export default function Home() {
               {/* Left Column */}
               <div className="flex flex-col pl-12 gap-9">
                 <Image
-                  src="/images/next.png"
+                  src="/optimized-images/next.webp"
                   alt="Next.js"
                   width={70}
                   height={19}
                 />
                 <Image
-                  src="/images/node.png"
+                  src="/optimized-images/node.webp"
                   alt="Node.js"
                   width={70}
                   height={19}
                 />
                 <Image
-                  src="/images/python.png"
+                  src="/optimized-images/python.webp"
                   alt="Python"
                   width={70}
                   height={19}
@@ -501,19 +501,19 @@ export default function Home() {
               {/* Right Column */}
               <div className="flex flex-col pr-11-pt-7 gap-10">
                 <Image
-                  src="/images/odoo.png"
+                  src="/optimized-images/odoo.webp"
                   alt="Odoo"
                   width={70}
                   height={19}
                 />
                 <Image
-                  src="/images/cursor.png"
+                  src="/optimized-images/cursor.webp"
                   alt="Cursor"
                   width={70}
                   height={19}
                 />
                 <Image
-                  src="/images/ai-driven.png"
+                  src="/optimized-images/ai-driven.webp"
                   alt="AI-driven Analytics"
                   width={116}
                   height={53}
@@ -525,7 +525,7 @@ export default function Home() {
             {/* Bottom Center */}
             <div className="flex justify-center item-center mb-19 mt-6">
               <Image
-                src="/images/custom.png"
+                src="/optimized-images/custom.webp"
                 alt="Custom APIs"
                 width={144}
                 height={48}
@@ -544,7 +544,7 @@ export default function Home() {
         {/* Arrow from gallery */}
         <div
           className="absolute left-0 top-1/2 max-sm:h-13 max-sm:mt-16 transform -translate-y-1/2 w-679 h-72 bg-no-repeat bg-contain"
-          style={{ backgroundImage: "url('/images/arrow.png')" }}
+          style={{ backgroundImage: "url('/optimized-images/arrow.webp')" }}
           aria-hidden="true"
         />
 
@@ -585,7 +585,7 @@ export default function Home() {
           <div className="flex-1">
             {/* Logo */}
             <Image
-              src="/images/bottom-logo.png" // gallery asset
+              src="/optimized-images/bottom-logo.webp" // gallery asset
               alt="DevAutoX Logo"
               width={180}
               height={31}
@@ -607,19 +607,19 @@ export default function Home() {
             {/* Social Icons */}
             <div className="flex gap-4">
               <Image
-                src="/images/Linkedin.png"
+                src="/optimized-images/Linkedin.webp"
                 alt="Facebook"
                 width={28}
                 height={28}
               />
               <Image
-                src="/images/Facebook.png"
+                src="/optimized-images/Facebook.webp"
                 alt="Twitter"
                 width={28}
                 height={28}
               />
               <Image
-                src="/images/Instagram.png"
+                src="/optimized-images/Instagram.webp"
                 alt="LinkedIn"
                 width={28}
                 height={28}
