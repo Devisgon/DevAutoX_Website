@@ -204,7 +204,7 @@ export default function Home() {
         {/* Hero Content */}
         <div className="max-w-3xl mx-auto px-6 py-32 md:py-48">
           <h1
-            className={`mb-4 leading-snug font-bold text-[40px] ${lexend.className} max-xs:text-[15px] max-sm:text-[15px]`}
+            className={`mb-4 leading-snug font-bold text-[40px] ${lexend.className} max-xs:text-[17px] max-sm:text-[15px]`}
           >
             <span className="whitespace-nowrap">
               Building Smart, Scalable & Automated
