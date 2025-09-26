@@ -206,7 +206,7 @@ export default function Home() {
           <h1
             className={`mb-4 leading-snug font-bold text-[40px] ${lexend.className} max-xs:text-[17px] max-sm:text-[17px]`}
           >
-            <span className="whitespace-nowrap">
+            <span className="whitespace-nowrap pr-2">
               Building Smart, Scalable & Automated
             </span>
             <br />
