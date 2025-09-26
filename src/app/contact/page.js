@@ -143,7 +143,7 @@ export default function About() {
 </nav>
 <section className="relative bg-white md:w-[1300px] h-[160px] sm:h-[200px] md:h-[260px] lg:h-[300px] overflow-hidden">
   <Image
-    src="/images/about-bg.png"
+    src="/optimized-images/about-bg.webp"
     alt="About DevAutoX"
     fill
     className="object-cover sm:object-contain" 
@@ -177,7 +177,7 @@ export default function About() {
       <div className="mt-6 text-black flex flex-col max-sm:whitespace-nowrap sm:flex-row sm:items-center gap-2">
         <div className="flex items-center gap-2">
           <Image
-            src="/images/Mail.png"
+            src="/optimized-images/Mail.webp"
             alt="Email Icon"
             width={23}
             height={23}
@@ -307,19 +307,19 @@ export default function About() {
             {/* Social Icons */}
             <div className="flex gap-4">
               <Image
-                src="/images/Linkedin.png"
+                src="/optimized-images/Linkedin.webp"
                 alt="Facebook"
                 width={28}
                 height={28}
               />
               <Image
-                src="/images/Facebook.png"
+                src="/optimized-images/Facebook.webp"
                 alt="Twitter"
                 width={28}
                 height={28}
               />
               <Image
-                src="/images/Instagram.png"
+                src="/optimized-images/Instagram.webp"
                 alt="LinkedIn"
                 width={28}
                 height={28}

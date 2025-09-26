@@ -237,7 +237,7 @@ export default function About() {
             {/* Logo */}
            <Link href="/" passHref>
   <Image
-    src="/optimized-images/logo.webp"
+    src="/optimized-images/bottom-logo.webp"
     alt="DevAutoX Logo"
     width={180}
     height={31}

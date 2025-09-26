@@ -156,7 +156,7 @@ const testimonials = [
 </nav>
 <section className="relative bg-white md:w-[1300px] h-[160px] sm:h-[200px] md:h-[260px] lg:h-[300px] overflow-hidden">
   <Image
-    src="/images/about-bg.png"
+    src="/optimized-images/about-bg.webp"
     alt="About DevAutoX"
     fill
     className="object-cover sm:object-contain" 
@@ -258,7 +258,7 @@ const testimonials = [
           {/* Right Image with Blur Text */}
           <div className="relative flex-1 order-1 md:order-2">
             <Image
-              src="/images/luxury.png" // Put your image inside /public/images/
+              src="/optimized-images/luxury.webp" // Put your image inside /public/images/
               alt="4042 Chalet Luxury Seaside Retreat Website"
               width={600}
               height={400}
@@ -291,7 +291,7 @@ const testimonials = [
       {/* Left Image */}
       <div className="relative flex-1 order-1 md:order-1">
         <Image
-          src="/images/persona.png"
+          src="/optimized-images/persona.webp"
           alt="4042 Chalet Luxury Seaside Retreat Website"
           width={600}
           height={400}
@@ -413,7 +413,7 @@ const testimonials = [
           {/* Right Image with Blur Text */}
           <div className="relative flex-1 order-1 md:order-2">
             <Image
-              src="/images/one.png" // Put your image inside /public/images/
+              src="/optimized-images/one.webp" // Put your image inside /public/images/
               alt="4042 Chalet Luxury Seaside Retreat Website"
               width={600}
               height={400}
@@ -467,7 +467,7 @@ const testimonials = [
             {/* Stars (from your gallery) */}
             <div className="flex items-center justify-center mb-3">
               <Image
-                src="/images/star.png" // replace with your star image path
+                src="/optimized-images/star.webp" // replace with your star image path
                 alt="star"
                 width={113}
                 height={21}
@@ -497,7 +497,7 @@ const testimonials = [
   <span className="inline-flex items-center underline">
     View All Reviews on Upwork 
     <Image
-      src="/images/right-arrow.png"
+      src="/optimized-images/right-arrow.webp"
       alt="arrow"
       width={18}
       height={18}
@@ -541,19 +541,19 @@ const testimonials = [
             {/* Social Icons */}
             <div className="flex gap-4">
               <Image
-                src="/images/Linkedin.png"
+                src="/optimized-images/Linkedin.webp"
                 alt="Facebook"
                 width={28}
                 height={28}
               />
               <Image
-                src="/images/Facebook.png"
+                src="/optimized-images/Facebook.webp"
                 alt="Twitter"
                 width={28}
                 height={28}
               />
               <Image
-                src="/images/Instagram.png"
+                src="/optimized-images/Instagram.webp"
                 alt="LinkedIn"
                 width={28}
                 height={28}

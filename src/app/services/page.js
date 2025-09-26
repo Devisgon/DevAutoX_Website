@@ -229,7 +229,7 @@ const cyber= [
 
   <section className="relative bg-white md:w-[1300px] h-[180px]  sm:h-[220px] md:h-[260px] lg:h-[300px] overflow-hidden">
   <Image
-    src="/images/about-bg.png"
+    src="/optimized-images/about-bg.webp"
     alt="About DevAutoX"
     fill
     className="object-cover sm:object-contain" 
@@ -288,7 +288,7 @@ const cyber= [
         {/* Right Image */}
         <div className="flex justify-center">
           <Image
-            src="/images/web.png" // replace with your image path in public folder
+            src="/optimized-images/web.webp" // replace with your image path in public folder
             alt="Web & App Development Illustration"
             width={500}
             height={400}
@@ -343,7 +343,7 @@ const cyber= [
     {/* Right Image */}
     <div className=" max-sm:order-2 flex justify-center md:justify-end">
       <Image
-        src="/images/automation.png"
+        src="/optimized-images/automation.webp"
         alt="Automation & AI Tools Illustration"
         width={500}
         height={400}
@@ -398,7 +398,7 @@ const cyber= [
         {/* Right Image */}
         <div className="flex justify-center">
           <Image
-            src="/images/api3.png" // replace with your image path in public folder
+            src="/optimized-images/api3.webp" // replace with your image path in public folder
             alt="Web & App Development Illustration"
             width={500}
             height={400}
@@ -452,7 +452,7 @@ const cyber= [
     {/* Image */}
     <div className="flex justify-center order-2 md:order-1">
       <Image
-        src="/images/cloud.png"
+        src="/optimized-images/cloud.webp"
         alt="Cloud & Hosting Illustration"
         width={500}
         height={400}
@@ -506,7 +506,7 @@ const cyber= [
         {/* Right Image */}
         <div className="flex justify-center">
           <Image
-            src="/images/cyber.png" // replace with your image path in public folder
+            src="/optimized-images/cyber.webp" // replace with your image path in public folder
             alt="Web & App Development Illustration"
             width={500}
             height={400}
@@ -524,7 +524,7 @@ const cyber= [
             {/* Logo */}
             <Link href="/" passHref>
   <Image
-    src="/optimized-images/logo.webp"
+    src="/optimized-images/bottom-logo.webp"
     alt="DevAutoX Logo"
     width={180}
     height={31}
@@ -547,19 +547,19 @@ const cyber= [
             {/* Social Icons */}
             <div className="flex gap-4">
               <Image
-                src="/images/Linkedin.png"
+                src="/optimized-images/Linkedin.webp"
                 alt="Facebook"
                 width={28}
                 height={28}
               />
               <Image
-                src="/images/Facebook.png"
+                src="/optimized-images/Facebook.webp"
                 alt="Twitter"
                 width={28}
                 height={28}
               />
               <Image
-                src="/images/Instagram.png"
+                src="/optimized-images/Instagram.webp"
                 alt="LinkedIn"
                 width={28}
                 height={28}

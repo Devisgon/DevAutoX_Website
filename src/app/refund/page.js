@@ -134,7 +134,7 @@ export default function About() {
 
   <section className="relative bg-white md:w-[1300px] h-[180px]  sm:h-[220px] md:h-[260px] lg:h-[300px] overflow-hidden">
   <Image
-    src="/images/about-bg.png"
+    src="/optimized-images/about-bg.webp"
     alt="About DevAutoX"
     fill
     className="object-cover sm:object-contain" 
@@ -233,19 +233,19 @@ If you have questions about this policy, please contact us at: Support@devautox.
             {/* Social Icons */}
             <div className="flex gap-4">
               <Image
-                src="/images/Linkedin.png"
+                src="/optimized-images/Linkedin.webp"
                 alt="Facebook"
                 width={28}
                 height={28}
               />
               <Image
-                src="/images/Facebook.png"
+                src="/optimized-images/Facebook.webp"
                 alt="Twitter"
                 width={28}
                 height={28}
               />
               <Image
-                src="/images/Instagram.png"
+                src="/optimized-images/Instagram.webp"
                 alt="LinkedIn"
                 width={28}
                 height={28}

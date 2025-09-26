@@ -25,46 +25,46 @@ const cardData = [
     heading: 'Built to Empower',
     subheading: <>We empower businesses to<br/> thrive by creating smart,<br/> scalable, and automated<br/> digital solutions.</>,
     number: '01',
-    icon: '/images/empower.png',
-    dotted: '/images/line.png',
+    icon: '/optimized-images/empower.webp',
+    dotted: '/optimized-images/line.webp',
   },
   {
     heading: 'The Digital Blueprint',
     subheading: <>We craft technology that<br/> works smart, saving time<br/> and reducing operational <br/>costs for our clients.</>,
     number: '02',
-    icon: '/images/digital.png',
-    dotted: '/images/line.png',
+    icon: '/optimized-images/digital.webp',
+    dotted: '/optimized-images/line.webp',
   },
   {
     heading: 'Long-Term Success',
     subheading: <>We build impactful<br/> solutions that are not just<br/> functional but also future-<br/>proof.</>,
     number: '03',
-        icon: '/images/long-term.png',
-    dotted: '/images/line.png',
+        icon: '/optimized-images/long-term.webp',
+    dotted: '/optimized-images/line.webp',
   },
   {
     heading: 'Lead with Innovation',
     subheading: <>Our vision is to be a leader<br/> in web solutions, recognized<br/> for our bold and user<br/>-centric ideas.</>,
     number: '04',
-       icon: '/images/innovation1.png',
+       icon: '/optimized-images/innovation1.webp',
 
-    dotted: '/images/line.png',
+    dotted: '/optimized-images/line.webp',
   },
   {
     heading: 'Create Impact',
     subheading: <>Help businesses transform <br/>the way they work with<br/> visionary and practical<br/> technology.</>,
     number: '05',
-      icon: '/images/impact.png',
+      icon: '/optimized-images/impact.webp',
 
-    dotted: '/images/line.png',
+    dotted: '/optimized-images/line.webp',
   },
   {
     heading: 'Achieve Potential',
     subheading: <>We continuously innovate<br/> and expand our expertise to<br/> help clients reach their full<br/> potential and succeed.</>,
     number: '06',
-       icon: '/images/potential.png',
+       icon: '/optimized-images/potential.webp',
 
-    dotted: '/images/line.png',
+    dotted: '/optimized-images/line.webp',
   },
 ];
   return (
@@ -181,7 +181,7 @@ const cardData = [
 
   <section className="relative bg-white md:w-[1300px] h-[180px] sm:h-[220px] md:h-[260px] lg:h-[300px] overflow-hidden">
   <Image
-    src="/images/about-bg.png"
+    src="/optimized-images/about-bg.webp"
     alt="About DevAutoX"
     fill
     className="object-cover sm:object-contain" 
@@ -214,7 +214,7 @@ const cardData = [
   {/* Right Image Section */}
   <div className="md:w-1/2 w-full flex justify-center max-sm:pt-5 order-2 md:order-2">
     <Image
-      src="/images/persons.png" // Replace with your actual gallery path
+      src="/optimized-images/persons.webp" // Replace with your actual gallery path
       alt="DevAutoX Team Illustration"
       width={455}
       height={456}
@@ -242,7 +242,7 @@ const cardData = [
       {/* Background with rounded corners */}
       <div className="absolute inset-0 rounded-lg overflow-hidden">
         <Image
-          src="/images/card-1.png"
+          src="/optimized-images/card-1.webp"
           alt="Card Background"
           fill
           className="object-cover"
@@ -281,7 +281,7 @@ const cardData = [
   {/* Vision Heading */}
  <div className="flex flex-col items-center  mb-8">
   <Image
-    src="/images/Line 1.png"
+    src="/optimized-images/Line 1.webp"
     alt="Dotted Icon"
     width={378}
     height={10}
@@ -302,7 +302,7 @@ const cardData = [
       {/* Background with rounded corners */}
       <div className="absolute inset-0 rounded-lg overflow-hidden">
         <Image
-          src="/images/card-1.png"
+          src="/optimized-images/card-1.webp"
           alt="Card Background"
           fill
           className="object-cover"
@@ -416,19 +416,19 @@ const cardData = [
             {/* Social Icons */}
             <div className="flex gap-4">
               <Image
-                src="/images/Linkedin.png"
+                src="/optimized-images/Linkedin.webp"
                 alt="Facebook"
                 width={28}
                 height={28}
               />
               <Image
-                src="/images/Facebook.png"
+                src="/optimized-images/Facebook.webp"
                 alt="Twitter"
                 width={28}
                 height={28}
               />
               <Image
-                src="/images/Instagram.png"
+                src="/optimized-images/Instagram.webp"
                 alt="LinkedIn"
                 width={28}
                 height={28}
