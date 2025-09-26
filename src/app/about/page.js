@@ -274,7 +274,7 @@ const cardData = [
   {/* Vision Heading */}
  <div className="flex flex-col items-center  mb-8">
   <Image
-    src="/images/line 1.png"
+    src="/images/Line 1.png"
     alt="Dotted Icon"
     width={378}
     height={10}
@@ -357,11 +357,11 @@ const cardData = [
     {/* Right Icons Section */}
     <div className="md:w-1/2 grid grid-cols-2 md:pr-14 font-medium sm:grid-cols-3 md:gap-0  space-y-6 max-sm:space-y-9 justify-center">
       {[
-        { label: 'Innovation', src: '/images/innovation.png', alt: 'Person with lightbulb' },
-        { label: 'Quality', src: '/images/quality1.png', alt: 'Clipboard with checkmark' },
+        { label: 'Innovation', src: '/images/Innovation.png', alt: 'Person with lightbulb' },
+        { label: 'Quality', src: '/images/Quality1.png', alt: 'Clipboard with checkmark' },
         { label: 'Collaboration', src: '/images/collaboration.png', alt: 'Three people connected' },
         { label: 'Integrity', src: '/images/Onboarding.png', alt: 'Handshake icon' },
-        { label: 'Growth', src: '/images/growth.png', alt: 'Bar chart with arrow' },
+        { label: 'Growth', src: '/images/Growth.png', alt: 'Bar chart with arrow' },
         { label: 'Reliability', src: '/images/reliability.png', alt: 'Person with shield' },
       ].map(({ label, src, alt }) => (
         <div key={label} className="flex flex-col items-center text-center">
@@ -407,19 +407,19 @@ const cardData = [
             {/* Social Icons */}
             <div className="flex gap-4">
               <Image
-                src="/images/linkedin.png"
+                src="/images/Linkedin.png"
                 alt="Facebook"
                 width={28}
                 height={28}
               />
               <Image
-                src="/images/facebook.png"
+                src="/images/Facebook.png"
                 alt="Twitter"
                 width={28}
                 height={28}
               />
               <Image
-                src="/images/instagram.png"
+                src="/images/Instagram.png"
                 alt="LinkedIn"
                 width={28}
                 height={28}

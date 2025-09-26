@@ -607,19 +607,19 @@ export default function Home() {
             {/* Social Icons */}
             <div className="flex gap-4">
               <Image
-                src="/images/linkedin.png"
+                src="/images/Linkedin.png"
                 alt="Facebook"
                 width={28}
                 height={28}
               />
               <Image
-                src="/images/facebook.png"
+                src="/images/Facebook.png"
                 alt="Twitter"
                 width={28}
                 height={28}
               />
               <Image
-                src="/images/instagram.png"
+                src="/images/Instagram.png"
                 alt="LinkedIn"
                 width={28}
                 height={28}
