@@ -187,102 +187,103 @@ const testimonials = [
 
 {/* portfolio */}
 
-   <section className="py-12 px-6 md:px-16 lg:px-24 bg-white">
-      <div className="max-w-6xl mx-auto">
-        {/* Centered Headings */}
-        <div className={`text-center ${lexend.className}`}>
-          <h2 className="text-[30px] font-bold text-black">Portfolio</h2>
-          <h3 className="text-[24px] font-semibold text-[#25A3E5] mt-2">
-            4042 Chalet – Luxury Seaside Retreat in Kuwait
-          </h3>
-        </div>
-
-        {/* Content Area: Text Left, Image Right */}
-        <div className="mt-10 flex flex-col md:flex-row gap-10 items-start">
-          {/* Left Content */}
-          <div className={`flex-1 order-2 md:order-1 ${lexend.className}`}>
-            <p className="text-black text-[14px] font-regular font-poppins leading-relaxed">
-              The client wanted a modern, user-friendly website to showcase 4042
-              Chalet, a luxury seaside retreat in Kuwait, and provide guests
-              with an easy way to explore amenities and make bookings.
-            </p>
-
-            {/* Services */}
-            <h4 className="text-[20px] font-medium font-poppins text-black mt-6">Service</h4>
-            <p className="text-black text-[13px] font-regular font-poppins mt-2">
-              Web Development, Plugin Integration, AI App Development, Payment
-              Functionality & Gateway
-            </p>
-
-            {/* Approach */}
-            <h4 className="text-[20px] font-medium font-poppins text-black mt-6">
-              Our Approach
-            </h4>
-            <p className="text-black text-[13px] font-regular font-poppins mt-2 leading-relaxed">
-              We designed and developed a fully responsive website with a clean
-              layout, seamless navigation, and optimized visuals to highlight
-              the chalet’s key features—private pool, outdoor garden, BBQ space,
-              and furnished living areas. The project included:
-            </p>
-            <ul className="list-disc pl-5 mt-2 text-black text-[13px] font-regular font-poppins space-y-1">
-              <li>Custom booking flow & details integration</li>
-              <li>Payment functionality with secure gateway</li>
-              <li>Engaging content and visual storytelling</li>
-              <li>Performance optimization for fast load times across devices</li>
-            </ul>
-
-            {/* Outcome */}
-           
-            <h4 className="text-[20px] font-medium font-poppins  text-black mt-6">Outcome</h4>
-            <p className="text-black mt-2 text-[13px] font-regular font-poppins leading-relaxed">
-              The result was a polished digital presence that reflects the
-              exclusivity of the chalet, increased visibility for potential
-              guests, and boosted the client’s ability to secure bookings
-              through a seamless, professional experience.
-            </p>
-
-            {/* Live Project */}
-            <p className="mt-4 text-black text-[14px] font-bold font-poppins">
-              Live Project:{" "}
-              <Link
-                href="https://4042chalet.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#25A3E5] underline"
-              >
-                4042chalet.com
-              </Link>
-            </p>
-          </div>
-
-          {/* Right Image with Blur Text */}
-          <div className="relative flex-1 order-1 md:order-2">
-            <Image
-              src="/optimized-images/luxury.webp" // Put your image inside /public/images/
-              alt="4042 Chalet Luxury Seaside Retreat Website"
-              width={600}
-              height={400}
-              className="w-full h-auto rounded-lg shadow-md object-cover"
-              priority
-            />
-
-            {/* Center Overlay Text */}
-            
-             
-            
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* Section 2 */}
-    <section className="py-12 px-6 md:px-16 lg:px-24 bg-white">
+ {/* Main Section: Text Left, Image Right */}
+<section className="py-12 px-6 md:px-16 lg:px-24 bg-white">
   <div className="max-w-6xl mx-auto">
     {/* Centered Headings */}
     <div className={`text-center ${lexend.className}`}>
-     
+      <h2 className="text-[30px] font-bold text-black">Portfolio</h2>
       <h3 className="text-[24px] font-semibold text-[#25A3E5] mt-2">
-       PersonaCraft.ai – AI Personal Branding Web App
+        4042 Chalet – Luxury Seaside Retreat in Kuwait
+      </h3>
+    </div>
+
+    {/* Content Area: Text Left, Image Right */}
+    <div className="mt-10 flex flex-col md:flex-row gap-10 items-start">
+      {/* Left Content */}
+      <div className={`flex-1 order-2 md:order-1 ${lexend.className}`}>
+        <p className="text-black text-[14px] font-regular font-poppins leading-relaxed">
+          The client wanted a modern, user-friendly website to showcase 4042
+          Chalet, a luxury seaside retreat in Kuwait, and provide guests
+          with an easy way to explore amenities and make bookings.
+        </p>
+
+        {/* Services */}
+        <h4 className="text-[20px] font-medium font-poppins text-black mt-6">Service</h4>
+        <p className="text-black text-[13px] font-regular font-poppins mt-2">
+          Web Development, Plugin Integration, AI App Development, Payment
+          Functionality & Gateway
+        </p>
+
+        {/* Approach */}
+        <h4 className="text-[20px] font-medium font-poppins text-black mt-6">Our Approach</h4>
+        <p className="text-black text-[13px] font-regular font-poppins mt-2 leading-relaxed">
+          We designed and developed a fully responsive website with a clean
+          layout, seamless navigation, and optimized visuals to highlight
+          the chalet’s key features—private pool, outdoor garden, BBQ space,
+          and furnished living areas. The project included:
+        </p>
+        <ul className="list-disc pl-5 mt-2 text-black text-[13px] font-regular font-poppins space-y-1">
+          <li>Custom booking flow & details integration</li>
+          <li>Payment functionality with secure gateway</li>
+          <li>Engaging content and visual storytelling</li>
+          <li>Performance optimization for fast load times across devices</li>
+        </ul>
+
+      
+      </div>
+
+      {/* Right Image */}
+      <div className="relative flex-1 order-1 md:order-2">
+        <Image
+          src="/optimized-images/luxury.webp"
+          alt="4042 Chalet Luxury Seaside Retreat Website"
+          width={600}
+          height={400}
+          className="w-full h-auto rounded-lg shadow-md object-cover"
+          priority
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Separate Outcome Section */}
+<section className="py-8 px-6 md:px-16 -mt-21 lg:px-24 bg-white">
+  <div className="max-w-6xl mx-auto">
+    <h4 className="text-[20px] font-bold font-poppins text-black mt-6 whitespace-nowrap">
+      Outcome
+    </h4>
+    <p className="text-black mt-2 text-[14px] font-regular font-poppins leading-relaxed md:whitespace-nowrap">
+      The result was a polished digital presence that reflects the
+      exclusivity of the chalet, increased visibility for potential
+      guests, and boosted the client’s ability to secure<br/> bookings
+      through a seamless, professional experience.
+    </p>
+      {/* Live Project */}
+        <p className="mt-4 text-black text-[14px] font-bold font-poppins">
+          Live Project:{" "}
+          <Link
+            href="https://4042chalet.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#25A3E5] underline"
+          >
+            4042chalet.com
+          </Link>
+        </p>
+  </div>
+</section>
+
+
+    {/* Section 2 */}
+ {/* Original Section: Image Left, Text Right (without Outcome nowrap) */}
+<section className="py-12 px-6 md:px-16 lg:px-24 bg-white">
+  <div className="max-w-6xl mx-auto">
+    {/* Centered Headings */}
+    <div className={`text-center ${lexend.className}`}>
+      <h3 className="text-[24px] font-semibold text-[#25A3E5] mt-2">
+        PersonaCraft.ai – AI Personal Branding Web App
       </h3>
     </div>
 
@@ -292,7 +293,7 @@ const testimonials = [
       <div className="relative flex-1 order-1 md:order-1">
         <Image
           src="/optimized-images/persona.webp"
-          alt="4042 Chalet Luxury Seaside Retreat Website"
+          alt="PersonaCraft AI Web App"
           width={600}
           height={400}
           className="w-full h-auto rounded-lg shadow-md object-cover"
@@ -309,13 +310,11 @@ const testimonials = [
         {/* Services */}
         <h4 className="text-[20px] font-medium font-poppins text-black mt-6">Service</h4>
         <p className="text-black text-[13px] font-regular font-poppins mt-2">
-         Web & Mobile Design Consultation , AI App Development , Test Management , Payment Gateway
+          Web & Mobile Design Consultation, AI App Development, Test Management, Payment Gateway
         </p>
 
         {/* Approach */}
-        <h4 className="text-[20px] font-medium font-poppins text-black mt-6">
-          Our Approach
-        </h4>
+        <h4 className="text-[20px] font-medium font-poppins text-black mt-6">Our Approach</h4>
         <p className="text-black text-[13px] font-regular font-poppins mt-2 leading-relaxed">
           We designed and developed the complete web application from scratch, covering both frontend and backend. The solution included:
         </p>
@@ -326,14 +325,23 @@ const testimonials = [
           <li>Scalable and modern tech stack for performance and reliability</li>
         </ul>
 
-        {/* Outcome */}
-        <h4 className="text-[20px] font-medium font-poppins text-black mt-6">Outcome</h4>
-        <p className="text-black mt-2 text-[13px] font-regular font-poppins leading-relaxed">
-         The platform was successfully delivered, meeting all client expectations. PersonaCraft.ai is now live, helping professionals enhance their online presence with AI-powered personal branding tools.
-        </p>
-
         {/* Live Project */}
-        <p className="mt-4 text-black text-[14px] font-bold font-poppins">
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Separate Outcome Section with whitespace-nowrap */}
+<section className="py-8 px-6 md:px-16 -mt-22 lg:px-24 bg-white">
+  <div className="max-w-6xl mx-auto">
+    <h4 className="text-[20px] font-bold  font-poppins text-black mt-6 whitespace-nowrap">
+      Outcome
+    </h4>
+    <p className="text-black mt-2 text-[14px] font-regular font-poppins leading-relaxed md:whitespace-nowrap">
+      The platform was successfully delivered, meeting all client expectations. PersonaCraft.ai is now live, helping professionals enhance their online presence with AI-<br/>powered personal branding tools.
+    </p>
+    <p className="mt-4 text-black text-[14px] font-bold font-poppins">
           Live Project:{" "}
           <Link
             href="https://personacraft.ai"
@@ -344,90 +352,97 @@ const testimonials = [
             personacraft.ai
           </Link>
         </p>
+  </div>
+</section>
+
+ 
+  {/* section 3 */}
+{/* Original Section: Heading + Content */}
+<section className="py-12 px-6 md:px-16 lg:px-24 bg-white">
+  <div className="max-w-6xl mx-auto">
+    {/* Centered Headings */}
+    <div className={`text-center ${lexend.className}`}>
+      <h3 className="text-[24px] font-semibold text-[#25A3E5] mt-2">
+        NovaOne Property Services
+      </h3>
+    </div>
+
+    {/* Content Area: Text Left, Image Right */}
+    <div className="mt-10 flex flex-col md:flex-row gap-10 items-start">
+      {/* Left Content */}
+      <div className={`flex-1 order-2 md:order-1 ${lexend.className}`}>
+        <p className="text-black text-[14px] font-regular font-poppins leading-relaxed">
+          NovaOne Property wanted a professional, high-converting website to promote
+          their wide range of residential and commercial cleaning services across
+          Melbourne. The client’s focus was on building trust, simplifying service
+          bookings, and showcasing their eco-friendly commitment to sustainability.
+        </p>
+
+        {/* Services */}
+        <h4 className="text-[20px] font-medium font-poppins text-black mt-6">
+          Service
+        </h4>
+        <p className="text-black text-[13px] font-regular font-poppins mt-2">
+          Web Development, Web API, WordPress Customization, AI Builder, Test Execution<br/>
+          & QA Engineering
+        </p>
+
+        {/* Approach */}
+        <h4 className="text-[20px] font-medium font-poppins text-black mt-6">
+          Our Approach
+        </h4>
+        <p className="text-black text-[13px] font-regular font-poppins mt-2 leading-relaxed">
+          Team DevAutoX handled the complete WordPress website development,<br/>
+          delivering:
+        </p>
+        <ul className="list-disc pl-5 mt-2 text-black text-[13px] font-regular font-poppins space-y-1">
+          <li>Designed a clean, responsive UI/UX for all devices.</li>
+          <li>Built custom service pages for cleaning and maintenance.</li>
+          <li>Added booking forms, clear CTAs, and structured sections.</li>
+          <li>Optimized SEO, speed, and mobile performance.</li>
+          <li>Highlighted eco-friendly partnerships and sustainability.</li>
+        </ul>
+
+      
+      </div>
+
+      {/* Right Image */}
+      <div className="relative flex-1 order-1 md:order-2">
+        <Image
+          src="/optimized-images/one.webp"
+          alt="NovaOne Website"
+          width={600}
+          height={400}
+          className="w-full h-auto rounded-lg shadow-md object-cover"
+          priority
+        />
       </div>
     </div>
   </div>
 </section>
- 
-  {/* section 3 */}
-   <section className="py-12 px-6 md:px-16 lg:px-24 bg-white">
-      <div className="max-w-6xl mx-auto">
-        {/* Centered Headings */}
-        <div className={`text-center ${lexend.className}`}>
-          <h3 className="text-[24px] font-semibold text-[#25A3E5] mt-2">
-            NovaOne Property Services
-          </h3>
-        </div>
 
-        {/* Content Area: Text Left, Image Right */}
-        <div className="mt-10 flex flex-col md:flex-row gap-10 items-start">
-          {/* Left Content */}
-          <div className={`flex-1 order-2 md:order-1 ${lexend.className}`}>
-            <p className="text-black text-[14px] font-regular font-poppins leading-relaxed">
-              NovaOne Property wanted a professional, high-converting website to promote their wide range of residential and commercial cleaning services across Melbourne. The client’s focus was on building trust, simplifying service bookings, and showcasing their eco-friendly commitment to sustainability.
-            </p>
+{/* Separate Outcome Section */}
+<section className="py-8 px-6 md:px-16 -mt-22 lg:px-24 bg-white">
+  <div className="max-w-6xl mx-auto">
+ <h4 className="text-[20px] font-bold font-poppins text-black mt-6">Outcome</h4>      
+    <p className="text-black mt-2 text-[14px] font-regular font-poppins leading-relaxed md:whitespace-nowrap">
+      The new website provided NovaOne with a strong digital presence, helping them connect with both residential and commercial clients. With user-friendly navigation,<br/> optimized performance, and sustainable branding, NovaOne is now positioned as a trusted and scalable cleaning brand in Melbourne.
+    </p>
+      {/* Live Project */}
+        <p className="mt-4 text-black text-[14px] font-bold font-poppins">
+          Live Project:{" "}
+          <Link
+            href="https://novaoneproperty.com.au"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#25A3E5] underline"
+          >
+            novaoneproperty.com.au
+          </Link>
+        </p>
+  </div>
+</section>
 
-            {/* Services */}
-            <h4 className="text-[20px] font-medium font-poppins text-black mt-6">Service</h4>
-            <p className="text-black text-[13px] font-regular font-poppins mt-2">
-              Web Development, Web API, WordPress Customization, AI Builder, Test Execution & QA Engineering
-            </p>
-
-            {/* Approach */}
-            <h4 className="text-[20px] font-medium font-poppins text-black mt-6">
-              Our Approach
-            </h4>
-            <p className="text-black text-[13px] font-regular font-poppins mt-2 leading-relaxed">
-             Team DevAutoX handled the complete WordPress website development, delivering:
-            </p>
-            <ul className="list-disc pl-5 mt-2 text-black text-[13px] font-regular font-poppins space-y-1">
-              <li>Designed a clean, responsive UI/UX for all devices.</li>
-              <li>Built custom service pages for cleaning and maintenance.</li>
-              <li>Added booking forms, clear CTAs, and structured sections.</li>
-              <li>Optimized SEO, speed, and mobile performance.</li>
-                            <li>Highlighted eco-friendly partnerships and sustainability.</li>
-
-            </ul>
-
-            {/* Outcome */}
-           
-            <h4 className="text-[20px] font-medium font-poppins  text-black mt-6">Outcome</h4>
-            <p className="text-black mt-2 text-[13px] font-regular font-poppins leading-relaxed">
-              The new website provided NovaOne with a strong digital presence, helping them connect with both residential and commercial clients. With user-friendly navigation, optimized performance, and sustainable branding, NovaOne is now positioned as a trusted and scalable cleaning brand in Melbourne.
-            </p>
-
-            {/* Live Project */}
-            <p className="mt-4 text-black text-[14px] font-bold font-poppins">
-              Live Project:{" "}
-              <Link
-                href="https://novaoneproperty.com.au"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#25A3E5] underline"
-              >
-                novaoneproperty.com.au
-              </Link>
-            </p>
-          </div>
-
-          {/* Right Image with Blur Text */}
-          <div className="relative flex-1 order-1 md:order-2">
-            <Image
-              src="/optimized-images/one.webp" // Put your image inside /public/images/
-              alt="4042 Chalet Luxury Seaside Retreat Website"
-              width={600}
-              height={400}
-              className="w-full h-auto rounded-lg shadow-md object-cover"
-              priority
-            />
-
-            {/* Center Overlay Text */}
-          
-            
-          </div>
-        </div>
-      </div>
-    </section>
 
  <section className="py-1 px-6 md:px-16 lg:px-24 bg-white text-right">
   <Link
