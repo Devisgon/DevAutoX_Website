@@ -1,4 +1,4 @@
-"use client"; // 👈 needed for hooks in app router
+"use client"; //  needed for hooks in app router
 
 import Image from "next/image";
 import Link from "next/link";
