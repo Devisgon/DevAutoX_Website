@@ -34,37 +34,37 @@ export default function Home() {
     {
       title: "Web & App Development",
       desc: "Building fast, intuitive, and innovative web and app experiences for your digital growth.",
-      icon: "/icons/webapp.png",
-      link: "/services/web-app", // ✅ unique link
+      icon: "/images/webapp.png",
+      link: "/services/#web", // unique link
     },
     {
       title: "Automation & AI Tools",
       desc: "Optimizing processes with smart tools that save time, improve accuracy, and increase efficiency.",
-      icon: "/icons/ai.png",
-      link: "/services/automation-ai",
+      icon: "/images/ai1.png",
+      link: "/services/#automation",
     },
     {
       title: "API Integrations",
       desc: "Connecting your systems seamlessly to enable smarter, unified operations with greater flexibility.",
-      icon: "/icons/api.png",
-      link: "/services/api-integrations",
+      icon: "/images/api4.png",
+      link: "/services/#api",
     },
     {
       title: (
         <>
           Cloud & Hosting
-          <br /> Solutions
+         Solutions
         </>
       ),
       desc: "Delivering secure, scalable, and reliable infrastructure to power your business growth and success.",
-      icon: "/icons/cloud.png",
-      link: "/services/cloud-hosting",
+      icon: "/images/cloud4.png",
+      link: "/services/#cloud",
     },
     {
       title: "Cyber Security",
       desc: "Delivering complete end-to-end protection for data, systems, users, and digital assets.",
-      icon: "/icons/security.png",
-      link: "/services/cyber-security",
+      icon: "/images/cyber4.png",
+      link: "/services/#cyber",
     },
   ];
 
@@ -236,44 +236,44 @@ export default function Home() {
       </section>
 
       {/* services */}
-      <section className="py-12 bg-white text-center font-poppins">
-        <h2 className="text-2xl font-bold font-lexend text-black mb-10">
-          Our Services
-        </h2>
+    <section className="py-12 bg-white text-center font-poppins">
+  <h2 className="text-2xl font-bold font-lexend text-black mb-10">
+    Our Services
+  </h2>
 
-        <div className="flex flex-wrap justify-center gap-6">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="w-[220px] h-[330px] flex flex-col justify-between text-left rounded-2xl shadow-md p-5 bg-gradient-to-b from-[#9FDDEF] to-[#E8FBFF] hover:-translate-y-1 transition-transform"
-            >
-              <div>
-                <Image
-                  src={service.icon}
-                  alt={service.title + " icon"}
-                  width={60}
-                  height={60}
-                  className="mb-4"
-                />
-                <h3 className="text-base text-center whitespace-nowrap font-bold font-lexend text-black mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-black leading-relaxed font-poppins">
-                  {service.desc}
-                </p>
-              </div>
-
-              {/* Learn More Link */}
-              <Link
-                href={service.link}
-                className="mt-4 text-sm font-semibold font-poppins underline underline-offset-2 text-black hover:text-gray-700"
-              >
-                Learn More
-              </Link>
-            </div>
-          ))}
+  <div className="flex flex-wrap justify-center gap-6">
+    {services.map((service, index) => (
+      <div
+        key={index}
+        className="w-[220px] h-[330px] flex flex-col justify-between text-left rounded-2xl shadow-md p-5 bg-gradient-to-b from-[#9FDDEF] to-[#E8FBFF] hover:-translate-y-1 transition-transform"
+      >
+        <div>
+          <Image
+            src={service.icon}
+            alt={service.title + " icon"}
+            width={100}
+            height={100}
+            className="mb-4 item-cn mx-auto"
+          />
+          <h3 className="text-[14px] text-center whitespace-nowrap font-bold font-lexend text-black mb-2">
+            {service.title}
+          </h3>
+          <p className="text-[12px] text-black text-center leading-relaxed font-poppins">
+            {service.desc}
+          </p>
         </div>
-      </section>
+
+        {/* Learn More Link */}
+        <Link
+          href={service.link}
+          className="mt-4 text-sm font-semibold font-poppins underline underline-offset-2 text-black hover:text-gray-700"
+        >
+          Learn More
+        </Link>
+      </div>
+    ))}
+  </div>
+</section>
       {/* philosophy */}
     <section className="py-12 px-6 bg-white md:px-16 lg:px-24">
   {/* Heading + Description */}
@@ -444,30 +444,29 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center gap-8">
               <div className="flex items-center gap-2">
                 <Image
-                  src="/images/ai.png"
+                  src="/images/ai-driven.png"
                   alt="AI-driven Analytics"
-                  width={70}
-                  height={40}
+                  width={116}
+                  height={53}
                 />
                 <p
                   className="text-[14px] font-semibold text-black"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
-                  AI-driven <br /> Analytics
                 </p>
               </div>
               <div className="flex items-center gap-2">
                 <Image
-                  src="/images/api.png"
+                  src="/images/custom.png"
                   alt="Custom APIs"
-                  width={70}
-                  height={40}
+                  width={144}
+                  height={58}
                 />
                 <p
                   className="text-[14px] font-semibold text-black"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
-                  Custom APIs
+                  
                 </p>
               </div>
             </div>
@@ -495,11 +494,12 @@ export default function Home() {
                   alt="Python"
                   width={70}
                   height={19}
+                  
                 />
               </div>
 
               {/* Right Column */}
-              <div className="flex flex-col pr-12 -pt-7 gap-10">
+              <div className="flex flex-col pr-11-pt-7 gap-10">
                 <Image
                   src="/images/odoo.png"
                   alt="Odoo"
@@ -513,10 +513,11 @@ export default function Home() {
                   height={19}
                 />
                 <Image
-                  src="/images/ai.png"
+                  src="/images/ai-driven.png"
                   alt="AI-driven Analytics"
-                  width={50}
-                  height={19}
+                  width={116}
+                  height={53}
+                  className="pr-8"
                 />
               </div>
             </div>
@@ -524,10 +525,10 @@ export default function Home() {
             {/* Bottom Center */}
             <div className="flex justify-center item-center mb-19 mt-6">
               <Image
-                src="/images/api.png"
+                src="/images/custom.png"
                 alt="Custom APIs"
-                width={60}
-                height={19}
+                width={144}
+                height={48}
               />
             </div>
           </div>
@@ -662,13 +663,13 @@ export default function Home() {
               </h3>
               <ul className="flex flex-col gap-2 text-[12px] font-normal font-[Poppins]">
                 <li>
-                  <Link href="/services/web-app" className="hover:underline">
+                  <Link href="/services/#web" className="hover:underline">
                     Web & App Development
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/automation-ui"
+                    href="/services/#automation"
                     className="hover:underline"
                   >
                     Automation & UI Tools
@@ -676,7 +677,7 @@ export default function Home() {
                 </li>
                 <li>
                   <Link
-                    href="/services/api-integrations"
+                    href="/services/#api"
                     className="hover:underline"
                   >
                     API Integrations
@@ -684,7 +685,7 @@ export default function Home() {
                 </li>
                 <li>
                   <Link
-                    href="/services/cloud-hosting"
+                    href="/services/#cloud"
                     className="hover:underline"
                   >
                     Cloud Hosting Solutions

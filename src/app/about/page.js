@@ -172,7 +172,7 @@ const cardData = [
   )}
 </nav>
 
-  <section className="relative bg-white w-full h-[180px] sm:h-[220px] md:h-[260px] lg:h-[300px] overflow-hidden">
+  <section className="relative bg-white md:w-[1300px] h-[180px] sm:h-[220px] md:h-[260px] lg:h-[300px] overflow-hidden">
   <Image
     src="/images/about-bg.png"
     alt="About DevAutoX"
@@ -463,13 +463,13 @@ const cardData = [
               </h3>
               <ul className="flex flex-col gap-2 text-[12px] font-normal font-Poppins">
                 <li>
-                  <Link href="/services/web-app" className="hover:underline">
+                  <Link href="/services/#web" className="hover:underline">
                     Web & App Development
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/automation-ui"
+                    href="/services/#automation"
                     className="hover:underline"
                   >
                     Automation & UI Tools
@@ -477,7 +477,7 @@ const cardData = [
                 </li>
                 <li>
                   <Link
-                    href="/services/api-integrations"
+                    href="/services/#api"
                     className="hover:underline"
                   >
                     API Integrations
@@ -485,7 +485,7 @@ const cardData = [
                 </li>
                 <li>
                   <Link
-                    href="/services/cloud-hosting"
+                    href="/services/#cloud"
                     className="hover:underline"
                   >
                     Cloud Hosting Solutions

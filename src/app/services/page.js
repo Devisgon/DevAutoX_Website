@@ -220,7 +220,7 @@ const cyber= [
   )}
 </nav>
 
-  <section className="relative bg-white w-full h-[180px] sm:h-[220px] md:h-[260px] lg:h-[300px] overflow-hidden">
+  <section className="relative bg-white md:w-[1300px] h-[180px]  sm:h-[220px] md:h-[260px] lg:h-[300px] overflow-hidden">
   <Image
     src="/images/about-bg.png"
     alt="About DevAutoX"
@@ -239,6 +239,7 @@ const cyber= [
 </section>
 
 {/* services */}
+<section id="web">
  <section className="w-full px-6 py-12 bg-white md:px-16 lg:px-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
@@ -289,8 +290,10 @@ const cyber= [
         </div>
       </div>
     </section>
+    </section>
 
     {/* services 2 */}
+    <section id="automation">
  <section className="w-full px-6 py-12 bg-white md:px-16 lg:px-24">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
@@ -343,9 +346,10 @@ const cyber= [
 
   </div>
 </section>
-
+</section>
 
 {/* services 3 */}
+<section id="api">
  <section className="w-full px-6 py-12 bg-white md:px-16 lg:px-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
@@ -396,8 +400,9 @@ const cyber= [
         </div>
       </div>
     </section>
-
+</section>
     {/* services 4 */}
+    <section id="cloud">
    <section className="w-full px-6 py-12 bg-white md:px-16 lg:px-24">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
     
@@ -450,8 +455,9 @@ const cyber= [
 
   </div>
 </section>
-
+</section>
 {/* services 5 */}
+<section id="cyber">
  <section className="w-full px-6 py-12 bg-white md:px-16 lg:px-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
@@ -501,6 +507,7 @@ const cyber= [
           />
         </div>
       </div>
+    </section>
     </section>
     {/* footer */}
       <footer className="bg-[#E8FAFF] text-black px-6 py-10 md:px-20">
@@ -587,13 +594,13 @@ const cyber= [
               </h3>
               <ul className="flex flex-col gap-2 text-[12px] font-normal font-Poppins">
                 <li>
-                  <Link href="/services/web-app" className="hover:underline">
+                  <Link href="/services/#web" className="hover:underline">
                     Web & App Development
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/automation-ui"
+                    href="/services/#automation"
                     className="hover:underline"
                   >
                     Automation & UI Tools
@@ -601,7 +608,7 @@ const cyber= [
                 </li>
                 <li>
                   <Link
-                    href="/services/api-integrations"
+                    href="/services/#api"
                     className="hover:underline"
                   >
                     API Integrations
@@ -609,7 +616,7 @@ const cyber= [
                 </li>
                 <li>
                   <Link
-                    href="/services/cloud-hosting"
+                    href="/services/#cloud"
                     className="hover:underline"
                   >
                     Cloud Hosting Solutions
