@@ -204,7 +204,7 @@ export default function Home() {
         {/* Hero Content */}
         <div className="max-w-3xl mx-auto px-6 py-32 md:py-48">
           <h1
-            className={`mb-4 leading-snug font-bold text-[40px] ${lexend.className} max-xs:text-[15px] max-sm:text-[19px]`}
+            className={`mb-4 leading-snug font-bold text-[40px] ${lexend.className} max-xs:text-[15px] max-sm:text-[15px]`}
           >
             <span className="whitespace-nowrap">
               Building Smart, Scalable & Automated
@@ -215,7 +215,7 @@ export default function Home() {
             </span>
           </h1>
           <p
-            className={`text-gray-800 mb-6 text-[20px] font-medium ${poppins.className} max-sm:text-[16px]`}
+            className={`text-gray-800 mb-6 text-[20px] max-sm:text-[13px] font-medium ${poppins.className} max-sm:text-[16px]`}
           >
             <span className="block md:whitespace-nowrap">
               At DevAutoX, we craft digital solutions that save time, cut costs,
