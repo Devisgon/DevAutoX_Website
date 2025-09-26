@@ -215,7 +215,7 @@ export default function Home() {
             </span>
           </h1>
           <p
-            className={`text-gray-800 mb-6 text-[20px] max-sm:text-[13px] font-medium ${poppins.className} max-sm:text-[16px]`}
+            className={`text-gray-800 mb-6 text-[20px] max-sm:text-[13px] font-medium ${poppins.className} max-sm:pl-2 max-sm:text-[16px]`}
           >
             <span className="block md:whitespace-nowrap">
               At DevAutoX, we craft digital solutions that save time, cut costs,
