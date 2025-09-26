@@ -119,7 +119,7 @@ export default function About() {
           >
             <span
               className={`cursor-pointer text-[17px] ${
-                item.path === "/portfolio"
+                item.path === "/contact"
                   ? "font-bold /contact"
                   : pathname === item.path
                   ? "text-black"
