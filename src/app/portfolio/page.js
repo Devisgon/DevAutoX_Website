@@ -4,9 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; //  instead of next/router
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
 
 
+import { Lexend } from "next/font/google";
+
+const lexend = Lexend({ subsets: ["latin"] });
 export default function About() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,6 +21,26 @@ const [openIndex, setOpenIndex] = useState(1); // Default open: Backend
     { name: "Portfolio / Client Reviews", path: "/portfolio" },
     { name: "Contact Us", path: "/contact" },
   ];
+
+//   testimonials
+const testimonials = [
+  {
+    title: "Web Development & Mobile App",
+    review:"I had an excellent experience working with Absar. He built a fast, professional website for my business that exceeded my expectations. One of the highlights was the automated booking system he created — it works flawlessly and adds ...",
+    client: "Upwork Client",
+  },
+  {
+    title: "Website for AI Generated Business",
+    review:"Overall great experience working with Absar. Everything was done on time and great communication throughout the process. Also his availability was great despite the different time zones. I’m looking forward to our future projects.",
+    client: "Upwork Client",
+  },
+  {
+    title: "Responsive WordPress Site",
+    review: "Their work quality was excellent, delivered on time, and communication was always clear. Very cooperative, responsive, and easy to work with. I would gladly work with them again and highly recommend their services.",
+    client: "Upwork Client",
+  },
+];
+
 
   return (
     <>
@@ -143,19 +165,478 @@ const [openIndex, setOpenIndex] = useState(1); // Default open: Backend
   </div>
 </section>
 
-<section className="relative bg-white max-sm:pt-9 flex justify-center px-4 md:px-0">
+<section className="relative bg-white max-sm:pt-9 flex justify-center px-9 md:px-19">
   <div
-    className="bg-[#E8FAFF] rounded-lg flex items-center justify-center text-center px-4 sm:px-6 md:px-6 mb-10 w-full max-w-[738px] h-[auto] py-4 md:h-[76px]"
+    className="bg-[#E8FAFF] rounded-lg flex items-center justify-center text-center px-9 sm:px-9 md:px-14 mb-10  max-w-[870px] h-[auto] py-4 md:h-[76px]"
   >
     <p
-      className="text-[14px] sm:text-[16px] md:text-[18px] text-black font-semibold italic"
+      className="text-[14px] sm:text-[16px] md:text-[18px] text-black md:whitespace-nowrap font-semibold italic"
       style={{ fontFamily: "Poppins, sans-serif" }}
     >
-      “Our work speaks through our clients’ success. From startups to enterprises, we’ve delivered solutions that are scalable, efficient, and future-ready.”
+      “Our work speaks through our clients’ success. From startups to enterprises, we’ve delivered <br/>solutions that are scalable, efficient, and future-ready.”
     </p>
   </div>
 </section>
 
+{/* portfolio */}
+
+   <section className="py-12 px-6 md:px-16 lg:px-24 bg-white">
+      <div className="max-w-6xl mx-auto">
+        {/* Centered Headings */}
+        <div className={`text-center ${lexend.className}`}>
+          <h2 className="text-[30px] font-bold text-black">Portfolio</h2>
+          <h3 className="text-[24px] font-semibold text-[#25A3E5] mt-2">
+            4042 Chalet – Luxury Seaside Retreat in Kuwait
+          </h3>
+        </div>
+
+        {/* Content Area: Text Left, Image Right */}
+        <div className="mt-10 flex flex-col md:flex-row gap-10 items-start">
+          {/* Left Content */}
+          <div className={`flex-1 order-2 md:order-1 ${lexend.className}`}>
+            <p className="text-black text-[14px] font-regular font-poppins leading-relaxed">
+              The client wanted a modern, user-friendly website to showcase 4042
+              Chalet, a luxury seaside retreat in Kuwait, and provide guests
+              with an easy way to explore amenities and make bookings.
+            </p>
+
+            {/* Services */}
+            <h4 className="text-[20px] font-medium font-poppins text-black mt-6">Service</h4>
+            <p className="text-black text-[13px] font-regular font-poppins mt-2">
+              Web Development, Plugin Integration, AI App Development, Payment
+              Functionality & Gateway
+            </p>
+
+            {/* Approach */}
+            <h4 className="text-[20px] font-medium font-poppins text-black mt-6">
+              Our Approach
+            </h4>
+            <p className="text-black text-[13px] font-regular font-poppins mt-2 leading-relaxed">
+              We designed and developed a fully responsive website with a clean
+              layout, seamless navigation, and optimized visuals to highlight
+              the chalet’s key features—private pool, outdoor garden, BBQ space,
+              and furnished living areas. The project included:
+            </p>
+            <ul className="list-disc pl-5 mt-2 text-black text-[13px] font-regular font-poppins space-y-1">
+              <li>Custom booking flow & details integration</li>
+              <li>Payment functionality with secure gateway</li>
+              <li>Engaging content and visual storytelling</li>
+              <li>Performance optimization for fast load times across devices</li>
+            </ul>
+
+            {/* Outcome */}
+           
+            <h4 className="text-[20px] font-medium font-poppins  text-black mt-6">Outcome</h4>
+            <p className="text-black mt-2 text-[13px] font-regular font-poppins leading-relaxed">
+              The result was a polished digital presence that reflects the
+              exclusivity of the chalet, increased visibility for potential
+              guests, and boosted the client’s ability to secure bookings
+              through a seamless, professional experience.
+            </p>
+
+            {/* Live Project */}
+            <p className="mt-4 text-black text-[14px] font-bold font-poppins">
+              Live Project:{" "}
+              <Link
+                href="https://4042chalet.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#25A3E5] underline"
+              >
+                4042chalet.com
+              </Link>
+            </p>
+          </div>
+
+          {/* Right Image with Blur Text */}
+          <div className="relative flex-1 order-1 md:order-2">
+            <Image
+              src="/images/luxury.png" // Put your image inside /public/images/
+              alt="4042 Chalet Luxury Seaside Retreat Website"
+              width={600}
+              height={400}
+              className="w-full h-auto rounded-lg shadow-md object-cover"
+              priority
+            />
+
+            {/* Center Overlay Text */}
+            
+             
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Section 2 */}
+    <section className="py-12 px-6 md:px-16 lg:px-24 bg-white">
+  <div className="max-w-6xl mx-auto">
+    {/* Centered Headings */}
+    <div className={`text-center ${lexend.className}`}>
+     
+      <h3 className="text-[24px] font-semibold text-[#25A3E5] mt-2">
+       PersonaCraft.ai – AI Personal Branding Web App
+      </h3>
+    </div>
+
+    {/* Content Area: Image Left, Text Right */}
+    <div className="mt-10 flex flex-col md:flex-row gap-10 items-start">
+      {/* Left Image */}
+      <div className="relative flex-1 order-1 md:order-1">
+        <Image
+          src="/images/persona.png"
+          alt="4042 Chalet Luxury Seaside Retreat Website"
+          width={600}
+          height={400}
+          className="w-full h-auto rounded-lg shadow-md object-cover"
+          priority
+        />
+      </div>
+
+      {/* Right Text */}
+      <div className={`flex-1 order-2 md:order-2 ${lexend.className}`}>
+        <p className="text-black text-[14px] font-regular font-poppins leading-relaxed">
+          The client wanted to build an AI-driven personal branding platform where users could generate professional bios, summaries, and resumes. The goal was to simplify personal branding and make it smarter through artificial intelligence.
+        </p>
+
+        {/* Services */}
+        <h4 className="text-[20px] font-medium font-poppins text-black mt-6">Service</h4>
+        <p className="text-black text-[13px] font-regular font-poppins mt-2">
+         Web & Mobile Design Consultation , AI App Development , Test Management , Payment Gateway
+        </p>
+
+        {/* Approach */}
+        <h4 className="text-[20px] font-medium font-poppins text-black mt-6">
+          Our Approach
+        </h4>
+        <p className="text-black text-[13px] font-regular font-poppins mt-2 leading-relaxed">
+          We designed and developed the complete web application from scratch, covering both frontend and backend. The solution included:
+        </p>
+        <ul className="list-disc pl-5 mt-2 text-black text-[13px] font-regular font-poppins space-y-1">
+          <li>Integration of OpenAI for intelligent content generation</li>
+          <li>Secure payment system using Stripe</li>
+          <li>Clean, responsive dashboard for smooth user interaction</li>
+          <li>Scalable and modern tech stack for performance and reliability</li>
+        </ul>
+
+        {/* Outcome */}
+        <h4 className="text-[20px] font-medium font-poppins text-black mt-6">Outcome</h4>
+        <p className="text-black mt-2 text-[13px] font-regular font-poppins leading-relaxed">
+         The platform was successfully delivered, meeting all client expectations. PersonaCraft.ai is now live, helping professionals enhance their online presence with AI-powered personal branding tools.
+        </p>
+
+        {/* Live Project */}
+        <p className="mt-4 text-black text-[14px] font-bold font-poppins">
+          Live Project:{" "}
+          <Link
+            href="https://personacraft.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#25A3E5] underline"
+          >
+            personacraft.ai
+          </Link>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+  {/* section 3 */}
+   <section className="py-12 px-6 md:px-16 lg:px-24 bg-white">
+      <div className="max-w-6xl mx-auto">
+        {/* Centered Headings */}
+        <div className={`text-center ${lexend.className}`}>
+          <h3 className="text-[24px] font-semibold text-[#25A3E5] mt-2">
+            NovaOne Property Services
+          </h3>
+        </div>
+
+        {/* Content Area: Text Left, Image Right */}
+        <div className="mt-10 flex flex-col md:flex-row gap-10 items-start">
+          {/* Left Content */}
+          <div className={`flex-1 order-2 md:order-1 ${lexend.className}`}>
+            <p className="text-black text-[14px] font-regular font-poppins leading-relaxed">
+              NovaOne Property wanted a professional, high-converting website to promote their wide range of residential and commercial cleaning services across Melbourne. The client’s focus was on building trust, simplifying service bookings, and showcasing their eco-friendly commitment to sustainability.
+            </p>
+
+            {/* Services */}
+            <h4 className="text-[20px] font-medium font-poppins text-black mt-6">Service</h4>
+            <p className="text-black text-[13px] font-regular font-poppins mt-2">
+              Web Development, Web API, WordPress Customization, AI Builder, Test Execution & QA Engineering
+            </p>
+
+            {/* Approach */}
+            <h4 className="text-[20px] font-medium font-poppins text-black mt-6">
+              Our Approach
+            </h4>
+            <p className="text-black text-[13px] font-regular font-poppins mt-2 leading-relaxed">
+             Team DevAutoX handled the complete WordPress website development, delivering:
+            </p>
+            <ul className="list-disc pl-5 mt-2 text-black text-[13px] font-regular font-poppins space-y-1">
+              <li>Designed a clean, responsive UI/UX for all devices.</li>
+              <li>Built custom service pages for cleaning and maintenance.</li>
+              <li>Added booking forms, clear CTAs, and structured sections.</li>
+              <li>Optimized SEO, speed, and mobile performance.</li>
+                            <li>Highlighted eco-friendly partnerships and sustainability.</li>
+
+            </ul>
+
+            {/* Outcome */}
+           
+            <h4 className="text-[20px] font-medium font-poppins  text-black mt-6">Outcome</h4>
+            <p className="text-black mt-2 text-[13px] font-regular font-poppins leading-relaxed">
+              The new website provided NovaOne with a strong digital presence, helping them connect with both residential and commercial clients. With user-friendly navigation, optimized performance, and sustainable branding, NovaOne is now positioned as a trusted and scalable cleaning brand in Melbourne.
+            </p>
+
+            {/* Live Project */}
+            <p className="mt-4 text-black text-[14px] font-bold font-poppins">
+              Live Project:{" "}
+              <Link
+                href="https://novaoneproperty.com.au"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#25A3E5] underline"
+              >
+                novaoneproperty.com.au
+              </Link>
+            </p>
+          </div>
+
+          {/* Right Image with Blur Text */}
+          <div className="relative flex-1 order-1 md:order-2">
+            <Image
+              src="/images/one.png" // Put your image inside /public/images/
+              alt="4042 Chalet Luxury Seaside Retreat Website"
+              width={600}
+              height={400}
+              className="w-full h-auto rounded-lg shadow-md object-cover"
+              priority
+            />
+
+            {/* Center Overlay Text */}
+          
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+ <section className="py-1 px-6 md:px-16 lg:px-24 bg-white text-right">
+  <Link
+    href="https://novaoneproperty.com.au"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-4 inline-flex items-center text-[#25A3E5] underline text-[15px] font-medium font-poppins"
+  >
+    View More on Upwork
+  </Link>
+</section>
+
+
+            {/* testimonials */}
+<section className="w-full bg-white px-6 py-9">
+  <h2 className="text-center text-[30px] font-bold font-lexend text-black mb-4">
+    What Our Clients Say
+  </h2>
+</section>
+
+{/* Background box with testimonials */}
+<section className="w-full bg-[#ADEBFC] py-12">
+  <div className="max-w-7xl mx-auto px-4 md:px-12">
+    {/* Testimonials Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center">
+      {testimonials.map((t, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-2xl shadow-md p-6 w-[320px] h-[280px] flex flex-col justify-between"
+        >
+          <div>
+            <h3 className="text-[13px] text-center font-semibold font-poppins text-black mb-2">
+              {t.title}
+            </h3>
+
+            {/* Stars (from your gallery) */}
+            <div className="flex items-center justify-center mb-3">
+              <Image
+                src="/images/star.png" // replace with your star image path
+                alt="star"
+                width={113}
+                height={21}
+              />
+            </div>
+
+            <p className="text-[12px] text-black font-regular font-poppins leading-relaxed line-clamp-5">
+              {t.review}
+            </p>
+          </div>
+
+          <span className="text-[11px] font-light italic text-right text-black font-poppins mt-3">
+            {t.client}
+          </span>
+        </div>
+      ))}
+    </div>
+
+    {/* Footer link */}
+    <div className="text-center mt-8">
+     <Link
+  href="https://www.upwork.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center text-sm font-medium text-black hover:text-sky-700 transition"
+>
+  <span className="inline-flex items-center underline">
+    View All Reviews on Upwork 
+    <Image
+      src="/images/right-arrow.png"
+      alt="arrow"
+      width={18}
+      height={18}
+      className="ml-2"
+    />
+  </span>
+</Link>
+
+    </div>
+  </div>
+</section>
+{/* footer */}
+      <footer className="bg-[#E8FAFF] text-black px-6 py-10 md:px-20">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+          {/* Left Section */}
+          <div className="flex-1">
+            {/* Logo */}
+            <Image
+              src="/images/bottom-logo.png" // gallery asset
+              alt="DevAutoX Logo"
+              width={180}
+              height={31}
+              className="mb-4"
+            />
+
+            {/* Description */}
+            <p className="text-[12px] font-medium whitespace-nowrap font-Poppins mb-2">
+              We are a team dedicated to speed, quality, and user-first <br />{" "}
+              design, ensuring every product is intuitive, reliable, and built
+              <br /> for long-term success.
+            </p>
+
+            {/* Contact */}
+            <address className="not-italic text-[11px] font-semibold font-Poppins mb-4">
+              support@devautox.com
+            </address>
+
+            {/* Social Icons */}
+            <div className="flex gap-4">
+              <Image
+                src="/images/Linkedin.png"
+                alt="Facebook"
+                width={28}
+                height={28}
+              />
+              <Image
+                src="/images/Facebook.png"
+                alt="Twitter"
+                width={28}
+                height={28}
+              />
+              <Image
+                src="/images/Instagram.png"
+                alt="LinkedIn"
+                width={28}
+                height={28}
+              />
+            </div>
+          </div>
+
+          {/* Right Section */}
+          <div className="flex-1 grid grid-cols-2 gap-6">
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-[17px] font-semibold font-Lexend mb-3">
+                Quick Links
+              </h3>
+              <nav className="flex flex-col gap-2 text-[12px] font-normal font-Poppins">
+            
+<Link href="/" className="hover:underline">
+  Home
+</Link>
+<Link href="/about" className="hover:underline">
+  About Us
+</Link>
+<Link href="/services" className="hover:underline">
+  Services
+</Link>
+<Link href="/portfolio" className="hover:underline">
+  Portfolio/Case Studies
+</Link>
+<Link href="/blogs" className="hover:underline">
+  Blogs/Resources
+</Link>
+<Link href="/contact" className="hover:underline">
+  Contact Us
+</Link>  
+              </nav>
+            </div>
+
+            {/* Services */}
+            <div>
+              <h3 className="text-[17px] font-semibold font-Lexend mb-3">
+                Services
+              </h3>
+              <ul className="flex flex-col gap-2 text-[12px] font-normal font-Poppins">
+                <li>
+                  <Link href="/services/#web" className="hover:underline">
+                    Web & App Development
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/#automation"
+                    className="hover:underline"
+                  >
+                    Automation & UI Tools
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/#api"
+                    className="hover:underline"
+                  >
+                    API Integrations
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/#cloud"
+                    className="hover:underline"
+                  >
+                    Cloud Hosting Solutions
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {/* Bottom Bar */}
+        <div className="mt-10  pt-4 text-center text-[12px] font-normal font-Poppins">
+          © 2023 DevAutoX |{" "}
+          <Link href="/terms" className="">
+            Terms & Conditions
+          </Link>{" "}
+          |{" "}
+          <Link href="/privacy" className="">
+            Privacy Policy
+          </Link>{" "}
+          |{" "}
+          <Link href="/refund" className="">
+            Refund Policy
+          </Link>
+        </div>
+      </footer>
+
+             
 
 
        </>
