@@ -630,17 +630,17 @@ const cyber= [
         {/* Bottom Bar */}
         <div className="mt-10  pt-4 text-center text-[12px] font-normal font-Poppins">
           © 2023 DevAutoX |{" "}
-          <a href="/terms" className="">
+          <Link href="/terms" className="">
             Terms & Conditions
-          </a>{" "}
+          </Link>{" "}
           |{" "}
-          <a href="/privacy" className="">
+          <Link href="/privacy" className="">
             Privacy Policy
-          </a>{" "}
+          </Link>{" "}
           |{" "}
-          <a href="/refund" className="">
+          <Link href="/refund" className="">
             Refund Policy
-          </a>
+          </Link>
         </div>
       </footer>
 

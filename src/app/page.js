@@ -3,7 +3,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // ✅ instead of next/router
+import { usePathname } from "next/navigation"; //instead of next/router
 import { useState } from "react";
 import { Poppins, Lexend } from "next/font/google";
 
@@ -204,7 +204,7 @@ export default function Home() {
         {/* Hero Content */}
         <div className="max-w-3xl mx-auto px-6 py-32 md:py-48">
           <h1
-            className={`mb-4 leading-snug font-bold text-[40px] ${lexend.className} max-sm:text-[19px]`}
+            className={`mb-4 leading-snug font-bold text-[40px] ${lexend.className} max-xs:text-[15px] max-sm:text-[19px]`}
           >
             <span className="whitespace-nowrap">
               Building Smart, Scalable & Automated
@@ -567,13 +567,13 @@ export default function Home() {
           </p>
 
           <div className="mt-8">
-            <a
+            <Link
               href="/contact"
               className="inline-block w-[215px] h-[50px] bg-[#65C8E3] text-white text-[20px] font-semibold rounded-full hover:bg-[#65C8E3] transition-colors duration-200 pt-2.5 items-center justify-center"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Get In Touch
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -699,17 +699,17 @@ export default function Home() {
         {/* Bottom Bar */}
         <div className="mt-10  pt-4 text-center text-[12px] font-normal font-[Poppins]">
           © 2023 DevAutoX |{" "}
-          <a href="/terms" className="">
+          <Link href="/terms" className="">
             Terms & Conditions
-          </a>{" "}
+          </Link>{" "}
           |{" "}
-          <a href="/privacy" className="">
+          <Link href="/privacy" className="">
             Privacy Policy
-          </a>{" "}
+          </Link>{" "}
           |{" "}
-          <a href="/refund" className="">
+          <Link href="/refund" className="">
             Refund Policy
-          </a>
+          </Link>
         </div>
       </footer>
     </>
