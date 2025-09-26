@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation"; // instead of next/router
 import { useState } from "react";
 import { Poppins, Lexend } from "next/font/google";
-
+import { motion } from "framer-motion";
 export default function About() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,6 +19,37 @@ export default function About() {
      { name: "Testimonials", path: "/portfolio#testimonials" },
     { name: "Contact Us", path: "/contact" },
   ];
+
+  // about1 objects
+  const fadeInLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  };
+
+  const fadeInRight = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  };
+ const container = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2, // delay between cards
+      },
+    },
+  };
+
+  // Individual card animation
+  const cardAnimation = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+
 // card data
 const cardData = [
   {
@@ -198,146 +229,149 @@ const cardData = [
 </section>
 
 {/* who we are */}
-<section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 bg-white">
-  {/* Left Text Section */}
-  <div className="md:w-1/2 w-full order-1 md:order-1 mt-8 md:mt-0">
-    <h2 className="text-[30px] font-semibold font-['Lexend'] text-gray-900 mb-4">
-      Who We Are?
-    </h2>
-    <p className="text-[17px] font-medium justify-left font-['Poppins'] text-black leading-relaxed">
-      At DevAutoX, we are a team of passionate innovators with bold ideas, dedicated to building custom digital solutions that empower businesses to grow. Our focus is on crafting technology that not only works but works smart, creating scalable systems tailored to client needs.
-      <br /><br />
-      Our approach is simple: we listen to clients, understand their unique challenges, and deliver technology that transforms the way they work. Our focus on speed, quality, and a user-first design ensures every project is impactful. We are proud of our track record of successful projects and satisfied clients, which stands as proof of the value we deliver.
-    </p>
-  </div>
+    <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 bg-white">
+      {/* Left Text Section */}
+      <motion.div
+        className="md:w-1/2 w-full order-1 md:order-1 mt-8 md:mt-0"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+        variants={fadeInLeft}
+      >
+        <h2 className="text-[30px] font-semibold font-Lexend text-gray-900 mb-4">
+          Who We Are?
+        </h2>
+        <p className="text-[17px] font-medium justify-left font-Poppins text-black leading-relaxed">
+          At DevAutoX, we are a team of passionate innovators with bold ideas, dedicated to building custom digital solutions that empower businesses to grow. Our focus is on crafting technology that not only works but works smart, creating scalable systems tailored to client needs.
+          <br /><br />
+          Our approach is simple: we listen to clients, understand their unique challenges, and deliver technology that transforms the way they work. Our focus on speed, quality, and a user-first design ensures every project is impactful. We are proud of our track record of successful projects and satisfied clients, which stands as proof of the value we deliver.
+        </p>
+      </motion.div>
 
-  {/* Right Image Section */}
-  <div className="md:w-1/2 w-full flex justify-center max-sm:pt-5 order-2 md:order-2">
-    <Image
-      src="/optimized-images/persons.webp" // Replace with your actual gallery path
-      alt="DevAutoX Team Illustration"
-      width={455}
-      height={456}
-      className="object-contain max-w-full h-auto"
-    />
-  </div>
-</section>
+      {/* Right Image Section */}
+      <motion.div
+        className="md:w-1/2 w-full flex justify-center max-sm:pt-5 order-2 md:order-2"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+        variants={fadeInRight}
+      >
+        <Image
+          src="/optimized-images/persons.webp"
+          alt="DevAutoX Team Illustration"
+          width={455}
+          height={456}
+          className="object-contain max-w-full h-auto"
+        />
+      </motion.div>
+    </section>
 
  
 
 {/* mission */}
 <section className="py-12 px-4 md:px-16 bg-[#EDFBFF]">
-  {/* Mission Heading */}
-  <h2 className="text-[30px] font-semibold font-lexend text-black text-center mb-8">
-    Our Mission
-  </h2>
 
-  {/* Mission Cards */}
- <div className="flex flex-wrap pt-9 justify-center gap-6 max-sm:space-y-5 mb-16">
-  {cardData.slice(0, 3).map((card, index) => (
-    <div
-      key={index}
-      className="relative w-[240px] h-[310px] rounded-lg flex flex-col items-center text-center"
-    >
-      {/* Background with rounded corners */}
-      <div className="absolute inset-0 rounded-lg overflow-hidden">
-        <Image
-          src="/optimized-images/card-1.webp"
-          alt="Card Background"
-          fill
-          className="object-cover"
-        />
-      </div>
+      {/* Mission Heading */}
+      <motion.h2
+        className="text-[30px] font-semibold font-lexend text-black text-center mb-8"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }}
+        viewport={{ once: false, amount: 0.3 }}
+      >
+        Our Mission
+      </motion.h2>
 
-      {/* Floating Icon (outside card top) */}
-      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 z-20">
-        <Image src={card.icon} alt="Top Icon" width={81} height={81} />
-      </div>
+      {/* Mission Cards */}
+      <motion.div
+        className="flex flex-wrap pt-9 justify-center gap-6 max-sm:space-y-5 mb-16"
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+      >
+        {cardData.slice(0, 3).map((card, index) => (
+          <motion.div
+            key={index}
+            className="relative w-[240px] h-[310px] rounded-lg flex flex-col items-center text-center"
+            variants={cardAnimation}
+          >
+            {/* Background */}
+            <div className="absolute inset-0 rounded-lg overflow-hidden">
+              <Image
+                src="/optimized-images/card-1.webp"
+                alt="Card Background"
+                fill
+                className="object-cover"
+              />
+            </div>
 
-      {/* Card Content */}
-      <div className="relative z-10 flex flex-col items-center text-black text-center px-4 py-16">
-        <h2 className="text-[14px] font-semibold font-lexend mb-2">
-          {card.heading}
-        </h2>
-        <p className="text-[12px] font-regular justify-center font-poppins mb-2">
-          {card.subheading}
-        </p>
-        <Image
-          src={card.dotted}
-          alt="Dotted Line"
-          width={60}
-          height={10}
-          className="my-4"
-        />
-        <span className="text-[14px] font-semibold font-inter">
-          {card.number}
-        </span>
-      </div>
-    </div>
-  ))}
-</div>
+            {/* Floating Icon */}
+            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 z-20">
+              <Image src={card.icon} alt="Top Icon" width={81} height={81} />
+            </div>
 
+            {/* Card Content */}
+            <div className="relative z-10 flex flex-col items-center text-black text-center px-4 py-16">
+              <h2 className="text-[14px] font-semibold font-lexend mb-2">{card.heading}</h2>
+              <p className="text-[12px] font-regular justify-center font-poppins mb-2">{card.subheading}</p>
+              <Image src={card.dotted} alt="Dotted Line" width={60} height={10} className="my-4" />
+              <span className="text-[14px] font-semibold font-inter">{card.number}</span>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
 
-  {/* Vision Heading */}
- <div className="flex flex-col items-center  mb-8">
-  <Image
-    src="/optimized-images/Line 1.webp"
-    alt="Dotted Icon"
-    width={378}
-    height={10}
-    className="mb-2"
-  />
-  <h2 className="text-[30px] font-semibold text-black font-lexend text-center">
-    Our Vision
-  </h2>
-</div>
+      {/* Vision Heading */}
+      <motion.div
+        className="flex flex-col items-center mb-8"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }}
+        viewport={{ once: false, amount: 0.3 }}
+      >
+        <Image src="/optimized-images/Line 1.webp" alt="Dotted Icon" width={378} height={10} className="mb-2" />
+        <h2 className="text-[30px] font-semibold text-black font-lexend text-center">Our Vision</h2>
+      </motion.div>
 
-{/* Vision Cards */}
-<div className="flex flex-wrap pt-9 justify-center max-sm:space-y-5 gap-6">
-  {cardData.slice(3, 6).map((card, index) => (
-    <div
-      key={index}
-      className="relative w-[240px] h-[310px] rounded-lg flex flex-col items-center text-center"
-    >
-      {/* Background with rounded corners */}
-      <div className="absolute inset-0 rounded-lg overflow-hidden">
-        <Image
-          src="/optimized-images/card-1.webp"
-          alt="Card Background"
-          fill
-          className="object-cover"
-        />
-      </div>
+      {/* Vision Cards */}
+      <motion.div
+        className="flex flex-wrap pt-9 justify-center max-sm:space-y-5 gap-6"
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+      >
+        {cardData.slice(3, 6).map((card, index) => (
+          <motion.div
+            key={index}
+            className="relative w-[240px] h-[310px] rounded-lg flex flex-col items-center text-center"
+            variants={cardAnimation}
+          >
+            {/* Background */}
+            <div className="absolute inset-0 rounded-lg overflow-hidden">
+              <Image
+                src="/optimized-images/card-1.webp"
+                alt="Card Background"
+                fill
+                className="object-cover"
+              />
+            </div>
 
-      {/* Floating Icon (outside card top center) */}
-      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 z-20">
-        <Image src={card.icon} alt="Top Icon" width={81} height={81} />
-      </div>
+            {/* Floating Icon */}
+            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 z-20">
+              <Image src={card.icon} alt="Top Icon" width={81} height={81} />
+            </div>
 
-      {/* Card Content */}
-      <div className="relative z-10 flex flex-col items-center text-black text-center px-4 pt-16">
-        <h2 className="text-[14px] font-semibold font-lexend mb-2">
-          {card.heading}
-        </h2>
-        <p className="text-[12px] font-regular font-poppins mb-2">
-          {card.subheading}
-        </p>
-        <Image
-          src={card.dotted}
-          alt="Dotted Line"
-          width={60}
-          height={10}
-          className="my-4"
-        />
-        <span className="text-[14px] font-semibold font-inter">
-          {card.number}
-        </span>
-      </div>
-    </div>
-  ))}
-</div>
-
-</section>
+            {/* Card Content */}
+            <div className="relative z-10 flex flex-col items-center text-black text-center px-4 pt-16">
+              <h2 className="text-[14px] font-semibold font-lexend mb-2">{card.heading}</h2>
+              <p className="text-[12px] font-regular font-poppins mb-2">{card.subheading}</p>
+              <Image src={card.dotted} alt="Dotted Line" width={60} height={10} className="my-4" />
+              <span className="text-[14px] font-semibold font-inter">{card.number}</span>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+    </section>
 {/* our values */}
 <section className="px-6 py-12 md:py-20 max-w-7xl bg-white mx-auto">
   {/* Centered Heading */}
