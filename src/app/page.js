@@ -294,7 +294,7 @@ export default function Home() {
   <div className={`text-center max-w-3xl mx-auto ${lexend.className}`}>
     <h2 className="text-[30px] font-semibold text-black">Our Philosophy</h2>
     <div className="flex justify-center">
-      <p className={`mt-4 text-center whitespace-pre-line text-[15px] ${poppins.className} text-black max-w-3xl`}>
+      <p className={`mt-4 text-center whitespace-pre-line max-sm:text-justify text-[15px] ${poppins.className} text-black max-w-3xl`}>
         We are a team with bold ideas, passionate about automation, AI, and
         custom web solutions.{" "}
         <span className="font-semibold">
