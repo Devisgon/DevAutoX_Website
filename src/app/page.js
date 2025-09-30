@@ -26,7 +26,7 @@ export default function Home() {
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Portfolio", path: "/portfolio" },
-     { name: "Testimonials", path: "/portfolio#testimonials" },
+    { name: "Testimonials", path: "/portfolio#testimonials" },
     { name: "Contact Us", path: "/contact" },
   ];
 
@@ -51,12 +51,7 @@ export default function Home() {
       link: "/services/#api",
     },
     {
-      title: (
-        <>
-          Cloud & Hosting
-         Solutions
-        </>
-      ),
+      title: <>Cloud & Hosting Solutions</>,
       desc: "Delivering secure, scalable, and reliable infrastructure to power your business growth and success.",
       icon: "/optimized-images/cloud4.webp",
       link: "/services/#cloud",
@@ -90,14 +85,14 @@ export default function Home() {
         {/* Logo */}
         <div className="flex pl-13 max-sm:pl-1 items-center">
           <Link href="/" passHref>
-  <Image
-    src="/optimized-images/logo.webp"
-    alt="DevAutoX Logo"
-    width={59}
-    height={46}
-    className="cursor-pointer"
-  />
-</Link>
+            <Image
+              src="/optimized-images/logo.webp"
+              alt="DevAutoX Logo"
+              width={59}
+              height={46}
+              className="cursor-pointer"
+            />
+          </Link>
           <span className="ml-2 font-bold text-[18px] text-black"></span>
         </div>
 
@@ -151,14 +146,14 @@ export default function Home() {
             <div className="w-full flex items-center justify-between">
               <div className="flex items-center">
                 <Link href="/" passHref>
-  <Image
-    src="/optimized-images/logo.webp"
-    alt="DevAutoX Logo"
-    width={59}
-    height={46}
-    className="cursor-pointer"
-  />
-</Link>
+                  <Image
+                    src="/optimized-images/logo.webp"
+                    alt="DevAutoX Logo"
+                    width={59}
+                    height={46}
+                    className="cursor-pointer"
+                  />
+                </Link>
                 <span className="ml-2 font-bold text-[18px] text-black"></span>
               </div>
               <button
@@ -196,241 +191,254 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-  <section className="relative w-full text-center text-black overflow-hidden">
-  {/* Gradient background */}
-  <div className="absolute inset-0 -z-10">
-    <div className="absolute inset-0 bg-gradient-to-b from-[#eaf9fb] via-[#bfeef4] to-[#3EB9E7]" />
+      <section className="relative w-full text-center text-black overflow-hidden">
+        {/* Gradient background */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#eaf9fb] via-[#bfeef4] to-[#3EB9E7]" />
 
-    {/* Waves */}
-    <div className="absolute bottom-0 left-0 w-full h-44 overflow-hidden pointer-events-none">
-      {/* Back slow wave */}
-      <svg
-        className="absolute left-0 bottom-0 wave-svg wave-slow"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M0,60 C300,140 900,0 1200,60 V120 H0 Z"
-          fill="#ffffff"
-        ></path>
-      </svg>
+          {/* Waves */}
+          <div className="absolute bottom-0 left-0 w-full h-44 overflow-hidden pointer-events-none">
+            {/* Back slow wave */}
+            <svg
+              className="absolute left-0 bottom-0 wave-svg wave-slow"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1200 120"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0,60 C300,140 900,0 1200,60 V120 H0 Z"
+                fill="#ffffff"
+              ></path>
+            </svg>
 
-      {/* Mid wave */}
-      <svg
-        className="absolute left-0 bottom-0 wave-svg wave-mid"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M0,80 C400,160 800,20 1200,80 V120 H0 Z"
-          fill="#ffffff"
-        ></path>
-      </svg>
+            {/* Mid wave */}
+            <svg
+              className="absolute left-0 bottom-0 wave-svg wave-mid"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1200 120"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0,80 C400,160 800,20 1200,80 V120 H0 Z"
+                fill="#ffffff"
+              ></path>
+            </svg>
 
-      {/* Front fast wave */}
-      <svg
-        className="absolute left-0 bottom-0 wave-svg wave-fast"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M0,40 C500,100 700,20 1200,50 V120 H0 Z"
-          fill="#ffffff"
-        ></path>
-      </svg>
-    </div>
-  </div>
-
-  {/* Hero Content */}
-<div className="max-w-3xl text-center justify-center mx-auto px-6 py-32 md:py-48">
-      <h1 className="mb-4 leading-snug font-bold text-[40px] ${lexend.className} max-xs:text-[17px]  font-bold text-[40px] max-xs:text-[17px] max-sm:text-[16px]">
-      <span className="whitespace-nowrap max-sm:pr-2">Building Smart, Scalable & Automated</span>
-      <br />
-      <span className="whitespace-nowrap">Solutions for Your Business</span>
-    </h1>
-
-    <p className="text-gray-800 mb-6 md:whitespace-nowrap text-[20px] max-sm:text-[12px] font-medium ${poppins.className} max-sm:pr-2 max-sm:text-[16px]">
-      At DevAutoX, we craft digital solutions that save time, cut costs,
-      and drive growth<br />
-      by combining cutting-edge technology with practical business needs.
-    </p>
-
-    <Link href="/contact">
-      <button className="bg-white text-black font-bold text-[18px] py-3 px-6 rounded-full shadow hover:shadow-lg transition max-sm:text-[16px]">
-        Let’s Build Together
-      </button>
-    </Link>
-  </div>
-</section>
-
-
-
-      {/* services */}
- 
-<section className="py-12 bg-white text-center font-poppins">
-  <h2 className="text-[30px] font-semibold font-lexend text-black mb-10">
-    Our Services
-  </h2>
-
-  <div className="flex flex-wrap justify-center gap-6">
-    {services.map((service, index) => (
-      <motion.div
-        key={index}
-        className="w-[220px] h-[330px] flex flex-col justify-between text-left rounded-2xl shadow-md p-5 bg-gradient-to-b from-[#9FDDEF] to-[#E8FBFF] hover:-translate-y-1 transition-transform"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false }}
-        transition={{ duration: 0.5 }}
-        whileHover={{ scale: 1.03 }}
-      >
-        <div>
-          <Image
-            src={service.icon}
-            alt={service.title + " icon"}
-            width={100}
-            height={100}
-            className="mb-4 item-cn mx-auto"
-          />
-          <h3 className="text-[14px] text-center whitespace-nowrap font-bold font-lexend text-black mb-2">
-            {service.title}
-          </h3>
-          <p className="text-[12px]  text-black max-sm:text-center md:text-justify leading-relaxed font-poppins">
-            {service.desc}
-          </p>
+            {/* Front fast wave */}
+            <svg
+              className="absolute left-0 bottom-0 wave-svg wave-fast"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1200 120"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0,40 C500,100 700,20 1200,50 V120 H0 Z"
+                fill="#ffffff"
+              ></path>
+            </svg>
+          </div>
         </div>
 
-        <Link
-          href={service.link}
-          className="mt-4 text-sm font-semibold font-poppins max-sm:text-center underline underline-offset-2 text-black hover:text-gray-700"
-        >
-          Learn More
-        </Link>
-      </motion.div>
-    ))}
-  </div>
-</section>
+        {/* Hero Content */}
+        <div className="max-w-3xl text-center justify-center mx-auto px-6 py-32 md:py-48">
+          <h1 className="mb-4 leading-snug font-bold text-[40px] ${lexend.className} max-xs:text-[17px]  font-bold text-[40px] max-xs:text-[17px] max-sm:text-[16px]">
+            <span className="whitespace-nowrap max-sm:pr-2">
+              Building Smart, Scalable & Automated
+            </span>
+            <br />
+            <span className="whitespace-nowrap">
+              Solutions for Your Business
+            </span>
+          </h1>
 
-{/* Philosophy Section */}
-<section className="py-12 px-6 bg-white md:px-16 lg:px-24">
-  <div className={`text-center max-w-3xl mx-auto ${lexend.className}`}>
-    <h2 className="text-[30px] font-semibold text-black">Our Philosophy</h2>
-    <div className="flex justify-center">
-      <p className={`mt-4 text-center whitespace-pre-line max-sm:text-justify text-[15px] ${poppins.className} text-black max-w-3xl`}>
-        We are a team with bold ideas, passionate about automation, AI, and
-        custom web solutions.{" "}
-        <span className="font-semibold">
-          We specialize in crafting technology
-          that not only works but works smart: solutions that save time, reduce operational costs, and create scalable systems tailored to client needs.
-        </span>{" "}
-        Our approach is centered on speed, quality, and a user-first design
-        approach, ensuring every product we deliver is intuitive, reliable,
-        and built for long-term success.
-      </p>
-    </div>
+          <p className="text-gray-800 mb-6 md:whitespace-nowrap text-[20px] max-sm:text-[12px] font-medium ${poppins.className} max-sm:pr-2 max-sm:text-[16px]">
+            At DevAutoX, we craft digital solutions that save time, cut costs,
+            and drive growth
+            <br />
+            by combining cutting-edge technology with practical business needs.
+          </p>
 
-  </div>
+          <Link href="/contact">
+            <button className="bg-white text-black font-bold text-[18px] py-3 px-6 rounded-full shadow hover:shadow-lg transition max-sm:text-[16px]">
+              Let’s Build Together
+            </button>
+          </Link>
+        </div>
+      </section>
 
-  <div className="w-full flex flex-col md:flex-row items-center gap-y-6 justify-center gap-0 py-10 max-w-[1000px] mx-auto">
+      {/* services */}
 
-    {/* Card 1 */}
-    <motion.div
-      className="relative w-[300px] h-[255px] md:pl-29 flex flex-col items-center justify-center text-center p-1 md:pr-2"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false }}
-      transition={{ duration: 0.6}}
-      whileHover={{ scale: 1.03 }}
-    >
-      <Image
-        src="/optimized-images/Polygon.webp"
-        alt="Card Background"
-        fill
-        className="object-contain md:pl-29 absolute inset-0"
-      />
-      <div className="relative z-10 flex flex-col items-center">
-        <Image
-          src="/optimized-images/speed.webp"
-          alt="Speed Icon"
-          width={26}
-          height={26}
-          className="mb-3"
-        />
-        <h3 className="text-[16px] font-bold font-poppins text-black mb-2">Speed</h3>
-        <p className="text-[14px] font-regular font-poppins text-black leading-relaxed">
-          To save time and <br />
-          reduce costs, we build <br />
-          smart, scalable, and <br />
-          automated solutions.
-        </p>
-      </div>
-    </motion.div>
+      <section className="py-12 bg-white text-center font-poppins">
+        <h2 className="text-[30px] font-semibold font-lexend text-black mb-10">
+          Our Services
+        </h2>
 
-    {/* Card 2 */}
-    <motion.div
-      className="relative w-[300px] h-[245px] max-sm:h-[255px] max-sm:w-[300px] flex flex-col items-center justify-center text-center p-4 md:px-1"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false }}
-      transition={{ duration: 0.6 }}
-      whileHover={{ scale: 1.03 }}
-    >
-      <Image
-        src="/optimized-images/Polygon.webp"
-        alt="Card Background"
-        fill
-        className="object-contain absolute inset-0"
-      />
-      <div className="relative z-10 mt-4 flex flex-col items-center">
-        <Image
-          src="/optimized-images/quality.webp"
-          alt="Quality Icon"
-          width={26}
-          height={26}
-          className="mb-3"
-        />
-        <h3 className="text-[16px] font-bold font-poppins text-black mb-2">Quality</h3>
-        <p className="text-[14px] font-regular font-poppins text-black leading-relaxed">
-          We ensure every <br /> product we deliver is <br /> intuitive, reliable, and <br /> built for long-term <br /> success.
-        </p>
-      </div>
-    </motion.div>
+        <div className="flex flex-wrap justify-center gap-6">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              className="w-[220px] h-[330px] flex flex-col justify-between text-left rounded-2xl shadow-md p-5 bg-gradient-to-b from-[#9FDDEF] to-[#E8FBFF] hover:-translate-y-1 transition-transform"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.5 }}
+              whileHover={{ scale: 1.03 }}
+            >
+              <div>
+                <Image
+                  src={service.icon}
+                  alt={service.title + " icon"}
+                  width={100}
+                  height={100}
+                  className="mb-4 item-cn mx-auto"
+                />
+                <h3 className="text-[14px] text-center whitespace-nowrap font-bold font-lexend text-black mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-[12px]  text-black max-sm:text-center md:text-justify leading-relaxed font-poppins">
+                  {service.desc}
+                </p>
+              </div>
 
-    {/* Card 3 */}
-    <motion.div
-      className="relative w-[300px] h-[255px] md:pr-29 gap-y-6 flex flex-col items-center justify-center text-center p-4 md:pl-2"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false }}
-      transition={{ duration: 0.6 }}
-      whileHover={{ scale: 1.03 }}
-    >
-      <Image
-        src="/optimized-images/Polygon.webp"
-        alt="Card Background"
-        fill
-        className="object-contain md:pr-29 absolute inset-0"
-      />
-      <div className="relative z-10 flex flex-col items-center">
-        <Image
-          src="/optimized-images/user.webp"
-          alt="User Icon"
-          width={26}
-          height={26}
-          className="mb-3"
-        />
-        <h3 className="text-[16px] font-bold font-poppins text-black mb-2">User-First</h3>
-        <p className="text-[14px] font-regular font-poppins text-black leading-relaxed">
-          We believe in a user- <br />
-          first approach to <br /> create impactful and <br /> functional projects.
-        </p>
-      </div>
-    </motion.div>
+              <Link
+                href={service.link}
+                className="mt-4 text-sm font-semibold font-poppins max-sm:text-center underline underline-offset-2 text-black hover:text-gray-700"
+              >
+                Learn More
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </section>
 
-  </div>
-</section>
+      {/* Philosophy Section */}
+      <section className="py-12 px-6 bg-white md:px-16 lg:px-24">
+        <div className={`text-center max-w-3xl mx-auto ${lexend.className}`}>
+          <h2 className="text-[30px] font-semibold text-black">
+            Our Philosophy
+          </h2>
+          <div className="flex justify-center">
+            <p
+              className={`mt-4 text-center whitespace-pre-line max-sm:text-justify text-[15px] ${poppins.className} text-black max-w-3xl`}
+            >
+              We are a team with bold ideas, passionate about automation, AI,
+              and custom web solutions.{" "}
+              <span className="font-semibold">
+                We specialize in crafting technology that not only works but
+                works smart: solutions that save time, reduce operational costs,
+                and create scalable systems tailored to client needs.
+              </span>{" "}
+              Our approach is centered on speed, quality, and a user-first
+              design approach, ensuring every product we deliver is intuitive,
+              reliable, and built for long-term success.
+            </p>
+          </div>
+        </div>
+
+        <div className="w-full flex flex-col md:flex-row items-center gap-y-6 justify-center gap-0 py-10 max-w-[1000px] mx-auto">
+          {/* Card 1 */}
+          <motion.div
+            className="relative w-[300px] h-[255px] md:pl-29 flex flex-col items-center justify-center text-center p-1 md:pr-2"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6 }}
+            whileHover={{ scale: 1.03 }}
+          >
+            <Image
+              src="/optimized-images/Polygon.webp"
+              alt="Card Background"
+              fill
+              className="object-contain md:pl-29 absolute inset-0"
+            />
+            <div className="relative z-10 flex flex-col items-center">
+              <Image
+                src="/optimized-images/speed.webp"
+                alt="Speed Icon"
+                width={26}
+                height={26}
+                className="mb-3"
+              />
+              <h3 className="text-[16px] font-bold font-poppins text-black mb-2">
+                Speed
+              </h3>
+              <p className="text-[14px] font-regular font-poppins text-black leading-relaxed">
+                To save time and <br />
+                reduce costs, we build <br />
+                smart, scalable, and <br />
+                automated solutions.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Card 2 */}
+          <motion.div
+            className="relative w-[300px] h-[245px] max-sm:h-[255px] max-sm:w-[300px] flex flex-col items-center justify-center text-center p-4 md:px-1"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6 }}
+            whileHover={{ scale: 1.03 }}
+          >
+            <Image
+              src="/optimized-images/Polygon.webp"
+              alt="Card Background"
+              fill
+              className="object-contain absolute inset-0"
+            />
+            <div className="relative z-10 mt-4 flex flex-col items-center">
+              <Image
+                src="/optimized-images/quality.webp"
+                alt="Quality Icon"
+                width={26}
+                height={26}
+                className="mb-3"
+              />
+              <h3 className="text-[16px] font-bold font-poppins text-black mb-2">
+                Quality
+              </h3>
+              <p className="text-[14px] font-regular font-poppins text-black leading-relaxed">
+                We ensure every <br /> product we deliver is <br /> intuitive,
+                reliable, and <br /> built for long-term <br /> success.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Card 3 */}
+          <motion.div
+            className="relative w-[300px] h-[255px] md:pr-29 gap-y-6 flex flex-col items-center justify-center text-center p-4 md:pl-2"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6 }}
+            whileHover={{ scale: 1.03 }}
+          >
+            <Image
+              src="/optimized-images/Polygon.webp"
+              alt="Card Background"
+              fill
+              className="object-contain md:pr-29 absolute inset-0"
+            />
+            <div className="relative z-10 flex flex-col items-center">
+              <Image
+                src="/optimized-images/user.webp"
+                alt="User Icon"
+                width={26}
+                height={26}
+                className="mb-3"
+              />
+              <h3 className="text-[16px] font-bold font-poppins text-black mb-2">
+                User-First
+              </h3>
+              <p className="text-[14px] font-regular font-poppins text-black leading-relaxed">
+                We believe in a user- <br />
+                first approach to <br /> create impactful and <br /> functional
+                projects.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
       {/* stack */}
       <section
         className="relative w-full py-12 px-4 flex flex-col items-center justify-center"
@@ -502,8 +510,7 @@ export default function Home() {
                 <p
                   className="text-[14px] font-semibold text-black"
                   style={{ fontFamily: "Inter, sans-serif" }}
-                >
-                </p>
+                ></p>
               </div>
               <div className="flex items-center gap-2">
                 <Image
@@ -515,9 +522,7 @@ export default function Home() {
                 <p
                   className="text-[14px] font-semibold text-black"
                   style={{ fontFamily: "Inter, sans-serif" }}
-                >
-                  
-                </p>
+                ></p>
               </div>
             </div>
           </div>
@@ -544,7 +549,6 @@ export default function Home() {
                   alt="Python"
                   width={70}
                   height={19}
-                  
                 />
               </div>
 
@@ -618,12 +622,12 @@ export default function Home() {
 
           <div className="mt-8">
             <Link
-  href="/contact"
-  className="inline-flex w-[215px] h-[50px] bg-[#65C8E3] text-white text-[20px] font-semibold rounded-full hover:bg-[#65C8E3] transition-colors duration-200 items-center justify-center"
-  style={{ fontFamily: "Poppins, sans-serif" }}
->
-  Get In Touch
-</Link>
+              href="/contact"
+              className="inline-flex w-[215px] h-[50px] bg-[#65C8E3] text-white text-[20px] font-semibold rounded-full hover:bg-[#65C8E3] transition-colors duration-200 items-center justify-center"
+              style={{ fontFamily: "Poppins, sans-serif" }}
+            >
+              Get In Touch
+            </Link>
           </div>
         </div>
       </section>
@@ -635,17 +639,17 @@ export default function Home() {
           <div className="flex-1">
             {/* Logo */}
             <Link href="/" passHref>
-  <Image
-    src="/optimized-images/bottom-logo.webp"
-    alt="DevAutoX Logo"
-    width={180}
-    height={31}
-    className="cursor-pointer"
-  />
-</Link>
+              <Image
+                src="/optimized-images/bottom-logo.webp"
+                alt="DevAutoX Logo"
+                width={180}
+                height={31}
+                className="cursor-pointer"
+              />
+            </Link>
 
             {/* Description */}
-             <p className="text-[12px] font-medium whitespace-nowrap font-Poppins mb-2">
+            <p className="text-[12px] font-medium whitespace-nowrap font-Poppins mb-2">
               We are a team dedicated to speed, quality, and user-first <br />{" "}
               design, ensuring every product is intuitive, reliable, and built
               <br /> for long-term success.
@@ -657,32 +661,44 @@ export default function Home() {
 
             {/* Social Icons */}
             <div className="flex gap-4">
-              <Link href="https://www.linkedin.com/company/devautox" target="_blank" rel="noopener noreferrer">
-    <Image
-      src="/optimized-images/Linkedin.webp"
-      alt="LinkedIn"
-      width={28}
-      height={28}
-    />
-  </Link>
+              <Link
+                href="https://www.linkedin.com/company/devautox"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/optimized-images/Linkedin.webp"
+                  alt="LinkedIn"
+                  width={28}
+                  height={28}
+                />
+              </Link>
 
-  <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-    <Image
-      src="/optimized-images/Facebook.webp"
-      alt="Facebook"
-      width={28}
-      height={28}
-    />
-  </Link>
+              <Link
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/optimized-images/Facebook.webp"
+                  alt="Facebook"
+                  width={28}
+                  height={28}
+                />
+              </Link>
 
-  <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-    <Image
-      src="/optimized-images/Instagram.webp"
-      alt="Instagram"
-      width={28}
-      height={28}
-    />
-  </Link>
+              <Link
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/optimized-images/Instagram.webp"
+                  alt="Instagram"
+                  width={28}
+                  height={28}
+                />
+              </Link>
             </div>
           </div>
 
@@ -694,25 +710,27 @@ export default function Home() {
                 Quick Links
               </h3>
               <nav className="flex flex-col gap-2 text-[12px] font-normal font-[Poppins]">
-         
-<Link href="/" className="hover:underline">
-  Home
-</Link>
-<Link href="/about" className="hover:underline">
-  About Us
-</Link>
-<Link href="/services" className="hover:underline">
-  Services
-</Link>
-<Link href="/portfolio" className="hover:underline">
-  Portfolio
-</Link>
-<Link href="/portfolio#testimonials" className="hover:underline">
-  Testimonials
-</Link>
-<Link href="/contact" className="hover:underline">
-  Contact Us
-</Link>
+                <Link href="/" className="hover:underline">
+                  Home
+                </Link>
+                <Link href="/about" className="hover:underline">
+                  About Us
+                </Link>
+                <Link href="/services" className="hover:underline">
+                  Services
+                </Link>
+                <Link href="/portfolio" className="hover:underline">
+                  Portfolio
+                </Link>
+                <Link
+                  href="/portfolio#testimonials"
+                  className="hover:underline"
+                >
+                  Testimonials
+                </Link>
+                <Link href="/contact" className="hover:underline">
+                  Contact Us
+                </Link>
               </nav>
             </div>
 
@@ -736,18 +754,12 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/services/#api"
-                    className="hover:underline"
-                  >
+                  <Link href="/services/#api" className="hover:underline">
                     API Integrations
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/services/#cloud"
-                    className="hover:underline"
-                  >
+                  <Link href="/services/#cloud" className="hover:underline">
                     Cloud Hosting Solutions
                   </Link>
                 </li>

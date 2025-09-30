@@ -14,12 +14,12 @@ export default function About() {
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Portfolio", path: "/portfolio" },
-     { name: "Testimonials", path: "/portfolio#testimonials" },
+    { name: "Testimonials", path: "/portfolio#testimonials" },
     { name: "Contact Us", path: "/contact" },
   ];
 
   // privacy
-    const policies = [
+  const policies = [
     {
       title: "Introduction",
       desc: "Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your data.",
@@ -58,7 +58,6 @@ export default function About() {
     },
   ];
 
-
   return (
     <>
       {/* Navbar */}
@@ -66,14 +65,14 @@ export default function About() {
         {/* Logo */}
         <div className="flex pl-13 max-sm:pl-1 items-center">
           <Link href="/" passHref>
-  <Image
-    src="/optimized-images/logo.webp"
-    alt="DevAutoX Logo"
-    width={59}
-    height={46}
-    className="cursor-pointer"
-  />
-</Link>
+            <Image
+              src="/optimized-images/logo.webp"
+              alt="DevAutoX Logo"
+              width={59}
+              height={46}
+              className="cursor-pointer"
+            />
+          </Link>
           <span className="ml-2 font-bold text-[18px] text-black"></span>
         </div>
 
@@ -127,14 +126,14 @@ export default function About() {
             <div className="w-full flex items-center justify-between">
               <div className="flex items-center">
                 <Link href="/" passHref>
-  <Image
-    src="/optimized-images/logo.webp"
-    alt="DevAutoX Logo"
-    width={59}
-    height={46}
-    className="cursor-pointer"
-  />
-</Link>
+                  <Image
+                    src="/optimized-images/logo.webp"
+                    alt="DevAutoX Logo"
+                    width={59}
+                    height={46}
+                    className="cursor-pointer"
+                  />
+                </Link>
                 <span className="ml-2 font-bold text-[18px] text-black"></span>
               </div>
               <button
@@ -170,7 +169,7 @@ export default function About() {
           </div>
         )}
       </nav>
-
+      {/* main section */}
       <section className="relative bg-white md:w-[1300px] h-[180px]  sm:h-[220px] md:h-[260px] lg:h-[300px] overflow-hidden">
         <Image
           src="/optimized-images/about-bg.webp"
@@ -190,37 +189,37 @@ export default function About() {
       </section>
 
       {/* terms & Conditions */}
-     <section className="w-full bg-white">
-      <div className="max-w-3xl mx-auto px-4 py-10 font-sans">
-        <motion.div
-          className="space-y-6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.15 } },
-          }}
-        >
-          {policies.map((item, index) => (
-            <motion.div
-              key={index}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-              }}
-            >
-              <h2 className="text-[19px] font-medium font-poppins text-black mb-1">
-                {item.title}
-              </h2>
-              <p className="text-[13px] font-regular font-poppins text-black">
-                {item.desc}
-              </p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
+      <section className="w-full bg-white">
+        <div className="max-w-3xl mx-auto px-4 py-10 font-sans">
+          <motion.div
+            className="space-y-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            variants={{
+              hidden: {},
+              visible: { transition: { staggerChildren: 0.15 } },
+            }}
+          >
+            {policies.map((item, index) => (
+              <motion.div
+                key={index}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+                }}
+              >
+                <h2 className="text-[19px] font-medium font-poppins text-black mb-1">
+                  {item.title}
+                </h2>
+                <p className="text-[13px] font-regular font-poppins text-black">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
       {/* footer */}
       <footer className="bg-[#E8FAFF] text-black px-6 py-10 md:px-20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
@@ -228,14 +227,14 @@ export default function About() {
           <div className="flex-1">
             {/* Logo */}
             <Link href="/" passHref>
-  <Image
-    src="/optimized-images/bottom-logo.webp"
-    alt="DevAutoX Logo"
-    width={180}
-    height={31}
-    className="cursor-pointer"
-  />
-</Link>
+              <Image
+                src="/optimized-images/bottom-logo.webp"
+                alt="DevAutoX Logo"
+                width={180}
+                height={31}
+                className="cursor-pointer"
+              />
+            </Link>
 
             {/* Description */}
             <p className="text-[12px] font-medium whitespace-nowrap font-Poppins mb-2">
@@ -251,32 +250,44 @@ export default function About() {
 
             {/* Social Icons */}
             <div className="flex gap-4">
-            <Link href="https://www.linkedin.com/company/devautox" target="_blank" rel="noopener noreferrer">
-    <Image
-      src="/optimized-images/Linkedin.webp"
-      alt="LinkedIn"
-      width={28}
-      height={28}
-    />
-  </Link>
+              <Link
+                href="https://www.linkedin.com/company/devautox"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/optimized-images/Linkedin.webp"
+                  alt="LinkedIn"
+                  width={28}
+                  height={28}
+                />
+              </Link>
 
-  <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-    <Image
-      src="/optimized-images/Facebook.webp"
-      alt="Facebook"
-      width={28}
-      height={28}
-    />
-  </Link>
+              <Link
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/optimized-images/Facebook.webp"
+                  alt="Facebook"
+                  width={28}
+                  height={28}
+                />
+              </Link>
 
-  <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-    <Image
-      src="/optimized-images/Instagram.webp"
-      alt="Instagram"
-      width={28}
-      height={28}
-    />
-  </Link>
+              <Link
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/optimized-images/Instagram.webp"
+                  alt="Instagram"
+                  width={28}
+                  height={28}
+                />
+              </Link>
             </div>
           </div>
 
@@ -300,8 +311,11 @@ export default function About() {
                 <Link href="/portfolio" className="hover:underline">
                   Portfolio
                 </Link>
-                <Link href="/portfolio#testimonials" className="hover:underline">
-                 Testimonials
+                <Link
+                  href="/portfolio#testimonials"
+                  className="hover:underline"
+                >
+                  Testimonials
                 </Link>
                 <Link href="/contact" className="hover:underline">
                   Contact Us
