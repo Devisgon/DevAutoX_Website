@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation"; //  instead of next/router
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-
+import AnimateSection from "../animatesection";
 
 export default function About() {
   const pathname = usePathname();
@@ -246,8 +246,10 @@ const cyber= [
 </section>
 
 {/* services */}
+ 
 <section id="web">
  <section className="w-full px-6 py-12 bg-white md:px-16 lg:px-24">
+   <AnimateSection>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
         <div>
@@ -276,7 +278,7 @@ const cyber= [
                   )}
                 </button>
                 {openIndex === index && (
-                  <p className="mt-2 text-[12px] font-regular font-Poppins text-black leading-relaxed">
+                  <p className="mt-2 text-[12px] text-justify font-regular font-Poppins text-black leading-relaxed">
                     {section.content}
                   </p>
                 )}
@@ -296,12 +298,14 @@ const cyber= [
           />
         </div>
       </div>
+      </AnimateSection>
     </section>
     </section>
 
     {/* services 2 */}
     <section id="automation">
  <section className="w-full px-6 py-12 bg-white md:px-16 lg:px-24">
+  <AnimateSection>
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
     {/* Text Content */}
@@ -331,7 +335,7 @@ const cyber= [
               )}
             </button>
             {openIndex === index && (
-              <p className="mt-2 text-[12px] font-normal font-Poppins text-black leading-relaxed">
+              <p className="mt-2 text-[12px] text-justify font-normal font-Poppins text-black leading-relaxed">
                 {cloud.content}
               </p>
             )}
@@ -352,12 +356,14 @@ const cyber= [
     </div>
 
   </div>
+  </AnimateSection>
 </section>
 </section>
 
 {/* services 3 */}
 <section id="api">
  <section className="w-full px-6 py-12 bg-white md:px-16 lg:px-24">
+  <AnimateSection>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
         <div>
@@ -386,7 +392,7 @@ const cyber= [
                   )}
                 </button>
                 {openIndex === index && (
-                  <p className="mt-2 text-[12px] font-regular font-Poppins text-black leading-relaxed">
+                  <p className="mt-2 text-[12px] font-regular text-justify font-Poppins text-black leading-relaxed">
                     {api.content}
                   </p>
                 )}
@@ -406,11 +412,13 @@ const cyber= [
           />
         </div>
       </div>
+      </AnimateSection>
     </section>
 </section>
     {/* services 4 */}
     <section id="cloud">
    <section className="w-full px-6 py-12 bg-white md:px-16 lg:px-24">
+    <AnimateSection>
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
     
     {/* Text Content - Mobile First */}
@@ -440,7 +448,7 @@ const cyber= [
               )}
             </button>
             {openIndex === index && (
-              <p className="mt-2 text-[12px] font-normal font-Poppins text-black leading-relaxed">
+              <p className="mt-2 text-[12px] font-normal text-justify font-Poppins text-black leading-relaxed">
                 {hosting.content}
               </p>
             )}
@@ -461,11 +469,13 @@ const cyber= [
     </div>
 
   </div>
+  </AnimateSection>
 </section>
 </section>
 {/* services 5 */}
 <section id="cyber">
  <section className="w-full px-6 py-12 bg-white md:px-16 lg:px-24">
+  <AnimateSection>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
         <div>
@@ -494,7 +504,7 @@ const cyber= [
                   )}
                 </button>
                 {openIndex === index && (
-                  <p className="mt-2 text-[12px] font-regular font-Poppins text-black leading-relaxed">
+                  <p className="mt-2 text-[12px] font-regular text-justify font-Poppins text-black leading-relaxed">
                     {cyber.content}
                   </p>
                 )}
@@ -514,6 +524,7 @@ const cyber= [
           />
         </div>
       </div>
+      </AnimateSection>
     </section>
     </section>
     {/* footer */}

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; //  instead of next/router
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 
 export default function About() {
   const pathname = usePathname();
@@ -159,11 +159,17 @@ export default function About() {
   </div>
 </section>
 
-{/* form */}
 <section className="w-full flex justify-center py-12 px-4 bg-white">
   <div className="max-w-7xl w-full flex flex-col lg:flex-row gap-8 items-start">
+
     {/* Left Text */}
-    <div className="flex-1 pl-4 sm:pl-8 lg:pl-14 text-left">
+    <motion.div
+      className="flex-1 pl-4 sm:pl-8 lg:pl-14 text-left"
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
       <h2 className="text-[22px] sm:text-[28px] font-medium font-poppins text-black mb-2">
         We’re here to
       </h2>
@@ -185,21 +191,25 @@ export default function About() {
           <span className="text-[16px] font-bold max-sm:whitespace-nowrap font-poppins text-black">
             Email:
           </span>
-        
-        <Link
-          href="mailto:support@devautox.com"
-          className="text-[16px] font-medium max-sm:whitespace-nowrap font-poppins break-words"
-        >
-          support@devautox.com
-        </Link>
+
+          <Link
+            href="mailto:support@devautox.com"
+            className="text-[16px] font-medium max-sm:whitespace-nowrap font-poppins break-words"
+          >
+            support@devautox.com
+          </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
 
     {/* Right Form */}
-    <div
+    <motion.div
       className="flex-1 bg-[#D9F7FF] rounded-xl shadow p-6 mr-0 lg:mr-14 
                  w-full h-auto sm:h-auto lg:w-[637px] lg:h-[486px]"
+      initial={{ opacity: 0, x: 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <h3 className="text-[16px] sm:text-[18px] font-semibold font-poppins text-black mb-1">
         Need Help?
@@ -272,7 +282,7 @@ export default function About() {
           Send Message
         </button>
       </form>
-    </div>
+    </motion.div>
   </div>
 </section>
 

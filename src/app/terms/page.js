@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; //  instead of next/router
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 
 export default function About() {
   const pathname = usePathname();
@@ -20,6 +20,46 @@ export default function About() {
     { name: "Contact Us", path: "/contact" },
   ];
 
+// terms
+ 
+  const terms = [
+    {
+      title: "Introduction",
+      desc: "Welcome to DevAutoX. By using our website, services, or products, you agree to these Terms & Conditions. Please read them carefully.",
+    },
+    {
+      title: "Services",
+      desc: "DevAutoX provides software development, design, and digital solutions. Specific project details, timelines, and deliverables will be agreed upon in writing before starting.",
+    },
+    {
+      title: "Payments",
+      desc: "We require a 30% upfront payment before starting any project. The remaining balance must be paid upon completion and delivery, unless otherwise agreed in writing. Payments are non-refundable once work has begun.",
+    },
+    {
+      title: "Client Responsibilities",
+      desc: "Clients must provide accurate information, timely feedback, and necessary materials to avoid project delays.",
+    },
+    {
+      title: "Revisions",
+      desc: "Each project includes a fixed number of revisions as agreed in the proposal. Extra revisions may cost additional fees.",
+    },
+    {
+      title: "Ownership & Rights",
+      desc: "After full payment, clients own the final deliverables. DevAutoX may showcase the work in its portfolio unless the client requests otherwise.",
+    },
+    {
+      title: "Liability",
+      desc: "We strive for high-quality results but cannot be held responsible for indirect damages, data loss, or issues outside our control.",
+    },
+    {
+      title: "Termination",
+      desc: "Either party may end the project in writing. If terminated by the client, payments made remain non-refundable.",
+    },
+    {
+      title: "Governing Law",
+      desc: "These Terms follow the laws of Pakistan.",
+    },
+  ];
   return (
     <>
     {/* Navbar */}
@@ -131,6 +171,8 @@ export default function About() {
     </div>
   )}
 </nav>
+{/* 
+terms */}
 
   <section className="relative bg-white md:w-[1300px] h-[180px]  sm:h-[220px] md:h-[260px] lg:h-[300px] overflow-hidden">
   <Image
@@ -151,84 +193,38 @@ export default function About() {
 </section>
 
 {/* terms & Conditions */}
-    <section className="w-full bg-white">
-        <div className="max-w-3xl mx-auto px-4 py-10 font-sans">
-         
-
-          <div className="space-y-6">
-            <div>
-              <h2 className="text-[15px] font-medium font-poppins text-black mb-1">
-                Introduction
+   <section className="w-full bg-white">
+      <div className="max-w-3xl mx-auto px-4 py-10 font-sans">
+        <motion.div
+          className="space-y-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.15 } },
+          }}
+        >
+          {terms.map((item, index) => (
+            <motion.div
+              key={index}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+              }}
+            >
+              <h2 className="text-[19px] font-medium font-poppins text-black mb-1">
+                {item.title}
               </h2>
-              <p className="text-[12px] font-regular font-poppins text-black">
-                Welcome to DevAutoX. By using our website, services, or products, you agree to these Terms &amp; Conditions. Please read them carefully.
+              <p className="text-[13px] font-regular font-poppins text-black">
+                {item.desc}
               </p>
-            </div>
-
-            <div>
-              <h2 className="text-[15px] font-medium font-poppins text-black mb-1">Services</h2>
-              <p className="text-[12px] font-regular font-poppins text-black">
-                DevAutoX provides software development, design, and digital solutions. Specific project details, timelines, and deliverables will be agreed upon in writing before starting.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-[15px] font-medium font-poppins text-black mb-1">Payments</h2>
-              <p className="text-[12px] font-regular font-poppins text-black">
-                We require a 30% upfront payment before starting any project. The remaining balance must be paid upon completion and delivery, unless otherwise agreed in writing. Payments are non-refundable once work has begun.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-[15px] font-medium font-poppins text-black mb-1">
-                Client Responsibilities
-              </h2>
-              <p className="text-[12px] font-regular font-poppins text-black">
-                Clients must provide accurate information, timely feedback, and necessary materials to avoid project delays.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-[15px] font-medium font-poppins text-black mb-1">Revisions</h2>
-              <p className="text-[12px] font-regular font-poppins text-black">
-                Each project includes a fixed number of revisions as agreed in the proposal. Extra revisions may cost additional fees.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-[15px] font-medium font-poppins text-black">
-                Ownership & Rights
-              </h2>
-              <p className="text-[12px] font-regular font-poppins text-black">
-                After full payment, clients own the final deliverables. DevAutoX may showcase the work in its portfolio unless the client requests otherwise.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-[15px] font-medium font-poppins text-black mb-1">Liability</h2>
-              <p className="text-[12px] font-regular font-poppins text-black">
-                We strive for high-quality results but cannot be held responsible for indirect damages, data loss, or issues outside our control.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-[15px] font-medium font-poppins text-black mb-1">Termination</h2>
-              <p className="text-[12px] font-regular font-poppins text-black">
-                Either party may end the project in writing. If terminated by the client, payments made remain non-refundable.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-[15px] font-medium font-poppins text-black mb-1">
-                Governing Law
-              </h2>
-              <p className="text-[12px] font-regular font-poppins text-black">
-                These Terms follow the laws of Pakistan.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+ 
+    </section>
        {/* footer */}
       <footer className="bg-[#E8FAFF] text-black px-6 py-10 md:px-20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">

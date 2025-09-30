@@ -49,6 +49,28 @@ export default function About() {
     },
   };
 
+    const icons = [
+    { label: "Innovation", src: "/images/Innovation.png", alt: "Person with lightbulb" },
+    { label: "Quality", src: "/images/Quality1.png", alt: "Clipboard with checkmark" },
+    { label: "Collaboration", src: "/images/collaboration.png", alt: "Three people connected" },
+    { label: "Integrity", src: "/images/Onboarding.png", alt: "Handshake icon" },
+    { label: "Growth", src: "/images/Growth.png", alt: "Bar chart with arrow" },
+    { label: "Reliability", src: "/images/reliability.png", alt: "Person with shield" },
+  ];
+
+  // Container + item animation setup
+  const container1 = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
 
 // card data
 const cardData = [
@@ -241,7 +263,7 @@ const cardData = [
         <h2 className="text-[30px] font-semibold font-Lexend text-gray-900 mb-4">
           Who We Are?
         </h2>
-        <p className="text-[17px] font-medium justify-left font-Poppins text-black leading-relaxed">
+        <p className="text-[17px] font-medium justify-left font-Poppins text-justify text-black leading-relaxed">
           At DevAutoX, we are a team of passionate innovators with bold ideas, dedicated to building custom digital solutions that empower businesses to grow. Our focus is on crafting technology that not only works but works smart, creating scalable systems tailored to client needs.
           <br /><br />
           Our approach is simple: we listen to clients, understand their unique challenges, and deliver technology that transforms the way they work. Our focus on speed, quality, and a user-first design ensures every project is impactful. We are proud of our track record of successful projects and satisfied clients, which stands as proof of the value we deliver.
@@ -313,7 +335,7 @@ const cardData = [
             {/* Card Content */}
             <div className="relative z-10 flex flex-col items-center text-black text-center px-4 py-16">
               <h2 className="text-[14px] font-semibold font-lexend mb-2">{card.heading}</h2>
-              <p className="text-[12px] font-regular justify-center font-poppins mb-2">{card.subheading}</p>
+              <p className="text-[12px] font-regular  justify-center font-poppins mb-2">{card.subheading}</p>
               <Image src={card.dotted} alt="Dotted Line" width={60} height={10} className="my-4" />
               <span className="text-[14px] font-semibold font-inter">{card.number}</span>
             </div>
@@ -373,52 +395,65 @@ const cardData = [
       </motion.div>
     </section>
 {/* our values */}
-<section className="px-6 py-12 md:py-20 max-w-7xl bg-white mx-auto">
-  {/* Centered Heading */}
-  <h2 className="text-[30px] font-semibold font-lexend text-black mb-10 text-center">
-    Our Values
-  </h2>
+ <section className="px-6 py-12 md:py-20 max-w-7xl bg-white mx-auto">
+      {/* Centered Heading */}
+      <motion.h2
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: false }}
+        className="text-[30px] font-semibold font-lexend text-black mb-10 text-center"
+      >
+        Our Values
+      </motion.h2>
 
-  {/* Content: Left text + Right icons */}
-  <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
-    {/* Left Text Section */}
-    <div className="md:w-1/2 flex flex-col items-start text-left">
-     <p className="text-[16px] sm:text-[18px] font-medium justify-text font-poppins text-black leading-relaxed max-sm:leading-[1.8] px-2 sm:px-6">
-  Our values are the foundation of our work. We are driven by <strong>Innovation,</strong> 
-  always seeking new ways to solve complex challenges. We are committed 
-  to <strong>Quality,</strong> ensuring every solution is reliable and built for long-term 
-  success. Our genuine <strong>Collaboration</strong> with clients creates truly transformative 
-  technology. We operate with <strong>Integrity,</strong> building lasting trust. We are focused 
-  on <strong>Growth,</strong> both for our team and for our clients. Ultimately, we stand for <strong>Reliability,</strong> 
-  delivering on our promises.
-</p>
+      {/* Content: Left text + Right icons */}
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+        {/* Left Text Section */}
+        <motion.div
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false }}
+          className="md:w-1/2 flex flex-col items-start text-left"
+        >
+          <p className="text-[16px] sm:text-[18px] text-justify font-medium justify-text font-poppins text-black leading-relaxed max-sm:leading-[1.8] px-2 sm:px-6">
+            Our values are the foundation of our work. We are driven by{" "}
+            <strong>Innovation,</strong> always seeking new ways to solve complex
+            challenges. We are committed to <strong>Quality,</strong> ensuring
+            every solution is reliable and built for long-term success. Our
+            genuine <strong>Collaboration</strong> with clients creates truly
+            transformative technology. We operate with <strong>Integrity,</strong>{" "}
+            building lasting trust. We are focused on <strong>Growth,</strong>{" "}
+            both for our team and for our clients. Ultimately, we stand for{" "}
+            <strong>Reliability,</strong> delivering on our promises.
+          </p>
+        </motion.div>
 
-    </div>
-
-    {/* Right Icons Section */}
-    <div className="md:w-1/2 grid grid-cols-2 md:pr-14 font-medium sm:grid-cols-3 md:gap-0  space-y-6 max-sm:space-y-9 justify-center">
-      {[
-        { label: 'Innovation', src: '/images/Innovation.png', alt: 'Person with lightbulb' },
-        { label: 'Quality', src: '/images/Quality1.png', alt: 'Clipboard with checkmark' },
-        { label: 'Collaboration', src: '/images/collaboration.png', alt: 'Three people connected' },
-        { label: 'Integrity', src: '/images/Onboarding.png', alt: 'Handshake icon' },
-        { label: 'Growth', src: '/images/Growth.png', alt: 'Bar chart with arrow' },
-        { label: 'Reliability', src: '/images/reliability.png', alt: 'Person with shield' },
-      ].map(({ label, src, alt }) => (
-        <div key={label} className="flex flex-col items-center text-center">
-          <Image
-            src={src}
-            alt={alt}
-            width={64}
-            height={64}
-            className="mb-2"
-          />
-          <span className="text-[20px] font-medium font-poppins text-black">{label}</span>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+        {/* Right Icons Section */}
+        <motion.div
+          variants={container1}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false }}
+          className="md:w-1/2 grid grid-cols-2 md:pr-14 font-medium sm:grid-cols-3 md:gap-0 space-y-6 max-sm:space-y-9 justify-center"
+        >
+          {icons.map(({ label, src, alt }) => (
+            <motion.div
+              key={label}
+              variants={item}
+              whileHover={{ scale: 1.05 }}
+              className="flex flex-col items-center text-center"
+            >
+              <Image src={src} alt={alt} width={64} height={64} className="mb-2" />
+              <span className="text-[20px] font-medium font-poppins text-black">
+                {label}
+              </span>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
  {/* footer */}
       <footer className="bg-[#E8FAFF] text-black px-6 py-10 md:px-20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">

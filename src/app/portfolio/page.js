@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; //  instead of next/router
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 
 import { Lexend } from "next/font/google";
@@ -154,6 +155,9 @@ const testimonials = [
     </div>
   )}
 </nav>
+
+{/* portfolio */}
+
 <section className="relative bg-white md:w-[1300px] h-[160px] sm:h-[200px] md:h-[260px] lg:h-[300px] overflow-hidden">
   <Image
     src="/optimized-images/about-bg.webp"
@@ -164,25 +168,32 @@ const testimonials = [
   />
   <div className="absolute inset-0 flex items-center justify-center">
     <h2
-      className="text-white font-semibold text-[18px] max-sm:pt-20 pt-9 sm:text-[22px] md:text-[28px] lg:text-[34px] text-center px-3"
+      className="text-white font-semibold text-[18px] md:pr-19 max-sm:pt-20 pt-9 sm:text-[22px] md:text-[28px] lg:text-[34px] text-center px-3"
       style={{ fontFamily: "Lexend, sans-serif" }}
     >
-      Our Services
+      Portfolio
     </h2>
   </div>
 </section>
 
+{/* our work speak */}
+
 <section className="relative bg-white max-sm:pt-9 flex justify-center px-9 md:px-19">
-  <div
-    className="bg-[#E8FAFF] rounded-lg flex items-center justify-center text-center px-9 sm:px-9 md:px-14 mb-10  max-w-[870px] h-[auto] py-4 md:h-[76px]"
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: false }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    className="bg-[#E8FAFF] rounded-lg flex items-center justify-center text-center px-9 sm:px-9 md:px-14 mb-10 max-w-[870px] h-[auto] py-4 md:h-[76px]"
   >
     <p
       className="text-[14px] sm:text-[16px] md:text-[18px] text-black md:whitespace-nowrap font-semibold italic"
       style={{ fontFamily: "Poppins, sans-serif" }}
     >
-      “Our work speaks through our clients’ success. From startups to enterprises, we’ve delivered <br/>solutions that are scalable, efficient, and future-ready.”
+      “Our work speaks through our clients’ success. From startups to enterprises, we’ve delivered   <span className="hidden sm:inline"><br /></span>
+solutions that are scalable, efficient, and future-ready.”
     </p>
-  </div>
+  </motion.div>
 </section>
 
 {/* portfolio */}
@@ -191,33 +202,43 @@ const testimonials = [
 <section className="py-12 px-6 md:px-16 lg:px-24 bg-white">
   <div className="max-w-6xl mx-auto">
     {/* Centered Headings */}
-    <div className={`text-center ${lexend.className}`}>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className={`text-center ${lexend.className}`}
+    >
       <h2 className="text-[30px] font-bold text-black">Portfolio</h2>
       <h3 className="text-[24px] font-semibold text-[#25A3E5] mt-2">
         4042 Chalet – Luxury Seaside Retreat in Kuwait
       </h3>
-    </div>
+    </motion.div>
 
     {/* Content Area: Text Left, Image Right */}
     <div className="mt-10 flex flex-col md:flex-row gap-10 items-start">
       {/* Left Content */}
-      <div className={`flex-1 order-2 md:order-1 ${lexend.className}`}>
-        <p className="text-black text-[14px] font-regular font-poppins leading-relaxed">
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className={`flex-1 order-2 md:order-1 ${lexend.className}`}
+      >
+        <p className="text-black text-[14px] font-regular text-justify font-poppins leading-relaxed">
           The client wanted a modern, user-friendly website to showcase 4042
           Chalet, a luxury seaside retreat in Kuwait, and provide guests
           with an easy way to explore amenities and make bookings.
         </p>
 
-        {/* Services */}
         <h4 className="text-[20px] font-medium font-poppins text-black mt-6">Service</h4>
         <p className="text-black text-[13px] font-regular font-poppins mt-2">
           Web Development, Plugin Integration, AI App Development, Payment
           Functionality & Gateway
         </p>
 
-        {/* Approach */}
         <h4 className="text-[20px] font-medium font-poppins text-black mt-6">Our Approach</h4>
-        <p className="text-black text-[13px] font-regular font-poppins mt-2 leading-relaxed">
+        <p className="text-black text-[13px] font-regular text-justify font-poppins mt-2 leading-relaxed">
           We designed and developed a fully responsive website with a clean
           layout, seamless navigation, and optimized visuals to highlight
           the chalet’s key features—private pool, outdoor garden, BBQ space,
@@ -229,12 +250,16 @@ const testimonials = [
           <li>Engaging content and visual storytelling</li>
           <li>Performance optimization for fast load times across devices</li>
         </ul>
-
-      
-      </div>
+      </motion.div>
 
       {/* Right Image */}
-      <div className="relative flex-1 order-1 md:order-2">
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative flex-1 order-1 md:order-2"
+      >
         <Image
           src="/optimized-images/luxury.webp"
           alt="4042 Chalet Luxury Seaside Retreat Website"
@@ -243,35 +268,59 @@ const testimonials = [
           className="w-full h-auto rounded-lg shadow-md object-cover"
           priority
         />
-      </div>
+      </motion.div>
     </div>
   </div>
 </section>
 
+
 {/* Separate Outcome Section */}
 <section className="py-8 px-6 md:px-16 -mt-21 lg:px-24 bg-white">
   <div className="max-w-6xl mx-auto">
-    <h4 className="text-[20px] font-bold font-poppins text-black mt-6 whitespace-nowrap">
+    {/* Outcome Heading */}
+    <motion.h4
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="text-[20px] font-bold font-poppins text-black mt-6 whitespace-nowrap"
+    >
       Outcome
-    </h4>
-    <p className="text-black mt-2 text-[14px] font-regular font-poppins leading-relaxed md:whitespace-nowrap">
+    </motion.h4>
+
+    {/* Outcome Text */}
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="text-black mt-2 text-[14px] font-regular font-poppins leading-relaxed md:whitespace-nowrap"
+    >
       The result was a polished digital presence that reflects the
       exclusivity of the chalet, increased visibility for potential
-      guests, and boosted the client’s ability to secure<br/> bookings
+      guests, and boosted the client’s ability to secure
+      <span className="hidden md:inline"><br /></span> bookings
       through a seamless, professional experience.
-    </p>
-      {/* Live Project */}
-        <p className="mt-4 text-black text-[14px] font-bold font-poppins">
-          Live Project:{" "}
-          <Link
-            href="https://4042chalet.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#25A3E5] underline"
-          >
-            4042chalet.com
-          </Link>
-        </p>
+    </motion.p>
+
+    {/* Live Project */}
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+      className="mt-4 text-black text-[14px] font-bold font-poppins"
+    >
+      Live Project:{" "}
+      <Link
+        href="https://4042chalet.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[#25A3E5] underline"
+      >
+        4042chalet.com
+      </Link>
+    </motion.p>
   </div>
 </section>
 
@@ -281,16 +330,28 @@ const testimonials = [
 <section className="py-12 px-6 md:px-16 lg:px-24 bg-white">
   <div className="max-w-6xl mx-auto">
     {/* Centered Headings */}
-    <div className={`text-center ${lexend.className}`}>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className={`text-center ${lexend.className}`}
+    >
       <h3 className="text-[24px] font-semibold text-[#25A3E5] mt-2">
         PersonaCraft.ai – AI Personal Branding Web App
       </h3>
-    </div>
+    </motion.div>
 
     {/* Content Area: Image Left, Text Right */}
     <div className="mt-10 flex flex-col md:flex-row gap-10 items-start">
       {/* Left Image */}
-      <div className="relative flex-1 order-1 md:order-1">
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative flex-1 order-1 md:order-1"
+      >
         <Image
           src="/optimized-images/persona.webp"
           alt="PersonaCraft AI Web App"
@@ -299,23 +360,27 @@ const testimonials = [
           className="w-full h-auto rounded-lg shadow-md object-cover"
           priority
         />
-      </div>
+      </motion.div>
 
       {/* Right Text */}
-      <div className={`flex-1 order-2 md:order-2 ${lexend.className}`}>
-        <p className="text-black text-[14px] font-regular font-poppins leading-relaxed">
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className={`flex-1 order-2 md:order-2 ${lexend.className}`}
+      >
+        <p className="text-black text-[14px] font-regular text-justify font-poppins leading-relaxed">
           The client wanted to build an AI-driven personal branding platform where users could generate professional bios, summaries, and resumes. The goal was to simplify personal branding and make it smarter through artificial intelligence.
         </p>
 
-        {/* Services */}
         <h4 className="text-[20px] font-medium font-poppins text-black mt-6">Service</h4>
         <p className="text-black text-[13px] font-regular font-poppins mt-2">
           Web & Mobile Design Consultation, AI App Development, Test Management, Payment Gateway
         </p>
 
-        {/* Approach */}
         <h4 className="text-[20px] font-medium font-poppins text-black mt-6">Our Approach</h4>
-        <p className="text-black text-[13px] font-regular font-poppins mt-2 leading-relaxed">
+        <p className="text-black text-[13px] font-regular text-justify font-poppins mt-2 leading-relaxed">
           We designed and developed the complete web application from scratch, covering both frontend and backend. The solution included:
         </p>
         <ul className="list-disc pl-5 mt-2 text-black text-[13px] font-regular font-poppins space-y-1">
@@ -324,34 +389,52 @@ const testimonials = [
           <li>Clean, responsive dashboard for smooth user interaction</li>
           <li>Scalable and modern tech stack for performance and reliability</li>
         </ul>
-
-        {/* Live Project */}
-        
-      </div>
+      </motion.div>
     </div>
   </div>
 </section>
 
-{/* Separate Outcome Section with whitespace-nowrap */}
+{/* Outcome Section */}
 <section className="py-8 px-6 md:px-16 -mt-22 lg:px-24 bg-white">
   <div className="max-w-6xl mx-auto">
-    <h4 className="text-[20px] font-bold  font-poppins text-black mt-6 whitespace-nowrap">
+    <motion.h4
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="text-[20px] font-bold font-poppins text-black mt-6 whitespace-nowrap"
+    >
       Outcome
-    </h4>
-    <p className="text-black mt-2 text-[14px] font-regular font-poppins leading-relaxed md:whitespace-nowrap">
-      The platform was successfully delivered, meeting all client expectations. PersonaCraft.ai is now live, helping professionals enhance their online presence with AI-<br/>powered personal branding tools.
-    </p>
-    <p className="mt-4 text-black text-[14px] font-bold font-poppins">
-          Live Project:{" "}
-          <Link
-            href="https://personacraft.ai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#25A3E5] underline"
-          >
-            personacraft.ai
-          </Link>
-        </p>
+    </motion.h4>
+
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="text-black mt-2 text-[14px] font-regular text-justify font-poppins leading-relaxed md:whitespace-nowrap"
+    >
+      The platform was successfully delivered, meeting all client expectations. PersonaCraft.ai is now live, helping professionals enhance their online presence with AI-
+      <span className="hidden md:inline"><br /></span>powered personal branding tools.
+    </motion.p>
+
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+      className="mt-4 text-black text-[14px] font-bold font-poppins"
+    >
+      Live Project:{" "}
+      <Link
+        href="https://personacraft.ai"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[#25A3E5] underline"
+      >
+        personacraft.ai
+      </Link>
+    </motion.p>
   </div>
 </section>
 
@@ -361,39 +444,45 @@ const testimonials = [
 <section className="py-12 px-6 md:px-16 lg:px-24 bg-white">
   <div className="max-w-6xl mx-auto">
     {/* Centered Headings */}
-    <div className={`text-center ${lexend.className}`}>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className={`text-center ${lexend.className}`}
+    >
       <h3 className="text-[24px] font-semibold text-[#25A3E5] mt-2">
         NovaOne Property Services
       </h3>
-    </div>
+    </motion.div>
 
     {/* Content Area: Text Left, Image Right */}
     <div className="mt-10 flex flex-col md:flex-row gap-10 items-start">
       {/* Left Content */}
-      <div className={`flex-1 order-2 md:order-1 ${lexend.className}`}>
-        <p className="text-black text-[14px] font-regular font-poppins leading-relaxed">
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className={`flex-1 order-2 md:order-1 ${lexend.className}`}
+      >
+        <p className="text-black text-[14px] font-regular text-justify font-poppins leading-relaxed">
           NovaOne Property wanted a professional, high-converting website to promote
           their wide range of residential and commercial cleaning services across
           Melbourne. The client’s focus was on building trust, simplifying service
           bookings, and showcasing their eco-friendly commitment to sustainability.
         </p>
 
-        {/* Services */}
-        <h4 className="text-[20px] font-medium font-poppins text-black mt-6">
-          Service
-        </h4>
-        <p className="text-black text-[13px] font-regular font-poppins mt-2">
-          Web Development, Web API, WordPress Customization, AI Builder, Test Execution<br/>
-          & QA Engineering
+        <h4 className="text-[20px] font-medium font-poppins text-black mt-6">Service</h4>
+        <p className="text-black text-[13px] font-regular text-justify font-poppins mt-2">
+          Web Development, Web API, WordPress Customization, AI Builder, Test Execution
+          <span className="hidden md:inline"><br/></span>& QA Engineering
         </p>
 
-        {/* Approach */}
-        <h4 className="text-[20px] font-medium font-poppins text-black mt-6">
-          Our Approach
-        </h4>
-        <p className="text-black text-[13px] font-regular font-poppins mt-2 leading-relaxed">
-          Team DevAutoX handled the complete WordPress website development,<br/>
-          delivering:
+        <h4 className="text-[20px] font-medium font-poppins text-black mt-6">Our Approach</h4>
+        <p className="text-black text-[13px] font-regular text-justify font-poppins mt-2 leading-relaxed">
+          Team DevAutoX handled the complete WordPress website development,
+          <span className="hidden md:inline"><br/></span> delivering:
         </p>
         <ul className="list-disc pl-5 mt-2 text-black text-[13px] font-regular font-poppins space-y-1">
           <li>Designed a clean, responsive UI/UX for all devices.</li>
@@ -402,12 +491,16 @@ const testimonials = [
           <li>Optimized SEO, speed, and mobile performance.</li>
           <li>Highlighted eco-friendly partnerships and sustainability.</li>
         </ul>
-
-      
-      </div>
+      </motion.div>
 
       {/* Right Image */}
-      <div className="relative flex-1 order-1 md:order-2">
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative flex-1 order-1 md:order-2"
+      >
         <Image
           src="/optimized-images/one.webp"
           alt="NovaOne Website"
@@ -416,114 +509,153 @@ const testimonials = [
           className="w-full h-auto rounded-lg shadow-md object-cover"
           priority
         />
-      </div>
+      </motion.div>
     </div>
   </div>
 </section>
 
-{/* Separate Outcome Section */}
+{/* Outcome Section */}
 <section className="py-8 px-6 md:px-16 -mt-22 lg:px-24 bg-white">
   <div className="max-w-6xl mx-auto">
- <h4 className="text-[20px] font-bold font-poppins text-black mt-6">Outcome</h4>      
-    <p className="text-black mt-2 text-[14px] font-regular font-poppins leading-relaxed md:whitespace-nowrap">
-      The new website provided NovaOne with a strong digital presence, helping them connect with both residential and commercial clients. With user-friendly navigation,<br/> optimized performance, and sustainable branding, NovaOne is now positioned as a trusted and scalable cleaning brand in Melbourne.
-    </p>
-      {/* Live Project */}
-        <p className="mt-4 text-black text-[14px] font-bold font-poppins">
-          Live Project:{" "}
-          <Link
-            href="https://novaoneproperty.com.au"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#25A3E5] underline"
-          >
-            novaoneproperty.com.au
-          </Link>
-        </p>
+    <motion.h4
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="text-[20px] font-bold font-poppins text-black mt-6"
+    >
+      Outcome
+    </motion.h4>      
+
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="text-black mt-2 text-[14px] font-regular font-poppins leading-relaxed md:whitespace-nowrap"
+    >
+      The new website provided NovaOne with a strong digital presence, helping them connect with both residential and commercial clients. With user-friendly navigation,
+      <span className="hidden md:inline"><br/></span> optimized performance, and sustainable branding, NovaOne is now positioned as a trusted and scalable cleaning brand in Melbourne.
+    </motion.p>
+
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+      className="mt-4 text-black text-[14px] font-bold font-poppins"
+    >
+      Live Project:{" "}
+      <Link
+        href="https://novaoneproperty.com.au"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[#25A3E5] underline"
+      >
+        novaoneproperty.com.au
+      </Link>
+    </motion.p>
   </div>
 </section>
 
-
- <section className="py-1 px-6 md:px-16 lg:px-24 bg-white text-right">
-  <Link
-    href="https://novaoneproperty.com.au"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="mt-4 inline-flex items-center text-[#25A3E5] underline text-[15px] font-medium font-poppins"
+{/* View More Link */}
+<section className="py-1 px-6 md:px-16 lg:px-24 bg-white text-right">
+  <motion.div
+    initial={{ opacity: 0, y: 10 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: false }}
+    transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
   >
-    View More on Upwork
-  </Link>
+    <Link
+      href="https://www.upwork.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-4 inline-flex items-center text-[#25A3E5] underline text-[15px] font-medium font-poppins"
+    >
+      View More on Upwork
+    </Link>
+  </motion.div>
 </section>
 
 
             {/* testimonials */}
-            <section id="testimonials">
-<section className="w-full bg-white px-6 py-9">
+           <section id="testimonials">
+  {/* Heading */}
+  <div className="w-full bg-white px-6 py-9">
   <h2 className="text-center text-[30px] font-bold font-lexend text-black mb-4">
     What Our Clients Say
   </h2>
-</section>
+</div>
 
-{/* Background box with testimonials */}
-<section className="w-full bg-[#ADEBFC] py-12">
-  <div className="max-w-7xl mx-auto px-4 md:px-12">
-    {/* Testimonials Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center">
-      {testimonials.map((t, index) => (
-        <div
-          key={index}
-          className="bg-white rounded-2xl shadow-md p-6 w-[320px] h-[280px] flex flex-col justify-between"
-        >
-          <div>
-            <h3 className="text-[13px] text-center font-semibold font-poppins text-black mb-2">
-              {t.title}
-            </h3>
 
-            {/* Stars (from your gallery) */}
-            <div className="flex items-center justify-center mb-3">
-              <Image
-                src="/optimized-images/star.webp" // replace with your star image path
-                alt="star"
-                width={113}
-                height={21}
-              />
+  {/* Background box with testimonials */}
+  <div className="w-full bg-[#ADEBFC] py-12">
+    <div className="max-w-7xl mx-auto px-4 md:px-12">
+      {/* Testimonials Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center">
+        {testimonials.map((t, index) => (
+          <motion.div
+            key={index}
+            className="bg-white rounded-2xl shadow-md p-6 w-[320px] h-[280px] flex flex-col justify-between"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.15 }}
+          >
+            <div>
+              <h3 className="text-[13px] text-center font-semibold font-poppins text-black mb-2">
+                {t.title}
+              </h3>
+
+              <div className="flex items-center justify-center mb-3">
+                <Image
+                  src="/optimized-images/star.webp"
+                  alt="star"
+                  width={113}
+                  height={21}
+                />
+              </div>
+
+              <p className="text-[12px] text-black text-justify font-regular font-poppins leading-relaxed line-clamp-5">
+                {t.review}
+              </p>
             </div>
 
-            <p className="text-[12px] text-black font-regular font-poppins leading-relaxed line-clamp-5">
-              {t.review}
-            </p>
-          </div>
+            <span className="text-[11px] font-light italic text-right text-black font-poppins mt-3">
+              {t.client}
+            </span>
+          </motion.div>
+        ))}
+      </div>
 
-          <span className="text-[11px] font-light italic text-right text-black font-poppins mt-3">
-            {t.client}
+      {/* Footer link */}
+      <motion.div
+        className="text-center mt-8"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+      >
+        <Link
+          href="https://www.upwork.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center text-sm font-medium text-black hover:text-sky-700 transition"
+        >
+          <span className="inline-flex items-center underline">
+            View All Reviews on Upwork 
+            <Image
+              src="/optimized-images/right-arrow.webp"
+              alt="arrow"
+              width={18}
+              height={18}
+              className="ml-2"
+            />
           </span>
-        </div>
-      ))}
-    </div>
-
-    {/* Footer link */}
-    <div className="text-center mt-8">
-     <Link
-  href="https://www.upwork.com/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center text-sm font-medium text-black hover:text-sky-700 transition"
->
-  <span className="inline-flex items-center underline">
-    View All Reviews on Upwork 
-    <Image
-      src="/optimized-images/right-arrow.webp"
-      alt="arrow"
-      width={18}
-      height={18}
-      className="ml-2"
-    />
-  </span>
-</Link>
-
+        </Link>
+      </motion.div>
     </div>
   </div>
-</section>
 </section>
 {/* footer */}
       <footer className="bg-[#E8FAFF] text-black px-6 py-10 md:px-20">

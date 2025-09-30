@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; //  instead of next/router
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 export default function About() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,6 +17,47 @@ export default function About() {
      { name: "Testimonials", path: "/portfolio#testimonials" },
     { name: "Contact Us", path: "/contact" },
   ];
+
+  // privacy
+    const policies = [
+    {
+      title: "Introduction",
+      desc: "Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your data.",
+    },
+    {
+      title: "Information We Collect",
+      desc: "We may collect your name, email, phone number, project details, and payment information when you use our services.",
+    },
+    {
+      title: "How We Use Information",
+      desc: "We use your data to provide services, process payments, and communicate project updates.",
+    },
+    {
+      title: "Data Protection",
+      desc: "We use secure systems to protect your personal information. However, no online method is 100% secure.",
+    },
+    {
+      title: "Cookies",
+      desc: "Our website may use cookies (small text files stored on your device) to improve your browsing experience.",
+    },
+    {
+      title: "Third Parties",
+      desc: "We do not sell or trade your data. We may share limited data with trusted partners (e.g., payment processors) only when required.",
+    },
+    {
+      title: "Your Rights",
+      desc: "You may request access, correction, or deletion of your data by contacting us.",
+    },
+    {
+      title: "Updates",
+      desc: "We may update this policy from time to time. Changes will be posted on this page.",
+    },
+    {
+      title: "Contact",
+      desc: "For questions, email us at: Support@devautox.com",
+    },
+  ];
+
 
   return (
     <>
@@ -149,101 +190,37 @@ export default function About() {
       </section>
 
       {/* terms & Conditions */}
-      <section className="w-full bg-white">
-        <div className="max-w-3xl mx-auto px-4 py-10 font-sans">
-          <div className="space-y-6">
-            <div>
-              <h2 className="text-[15px] font-medium font-poppins text-black mb-1">
-                Introduction
+     <section className="w-full bg-white">
+      <div className="max-w-3xl mx-auto px-4 py-10 font-sans">
+        <motion.div
+          className="space-y-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.15 } },
+          }}
+        >
+          {policies.map((item, index) => (
+            <motion.div
+              key={index}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+              }}
+            >
+              <h2 className="text-[19px] font-medium font-poppins text-black mb-1">
+                {item.title}
               </h2>
-              <p className="text-[12px] font-regular font-poppins text-black">
-                Your privacy is important to us. This Privacy Policy explains
-                how we collect, use, and protect your data.{" "}
+              <p className="text-[13px] font-regular font-poppins text-black">
+                {item.desc}
               </p>
-            </div>
-
-            <div>
-              <h2 className="text-[15px] font-medium font-poppins text-black mb-1">
-                Information We Collect
-              </h2>
-              <p className="text-[12px] font-regular font-poppins text-black">
-                We may collect your name, email, phone number, project details,
-                and payment information when you use our services.{" "}
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-[15px] font-medium font-poppins text-black mb-1">
-                How We Use Information
-              </h2>
-              <p className="text-[12px] font-regular font-poppins text-black">
-                We use your data to provide services, process payments, and
-                communicate project updates.{" "}
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-[15px] font-medium font-poppins text-black mb-1">
-                Data Protection
-              </h2>
-              <p className="text-[12px] font-regular font-poppins text-black">
-                We use secure systems to protect your personal information.
-                However, no online method is 100% secure.{" "}
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-[15px] font-medium font-poppins text-black mb-1">
-                Cookies
-              </h2>
-              <p className="text-[12px] font-regular font-poppins text-black">
-                Our website may use cookies (small text files stored on your
-                device) to improve your browsing experience.{" "}
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-[15px] font-medium font-poppins text-black">
-                Third Parties
-              </h2>
-              <p className="text-[12px] font-regular font-poppins text-black">
-                We do not sell or trade your data. We may share limited data
-                with trusted partners (e.g., payment processors) only when
-                required.{" "}
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-[15px] font-medium font-poppins text-black mb-1">
-                Your Rights
-              </h2>
-              <p className="text-[12px] font-regular font-poppins text-black">
-                You may request access, correction, or deletion of your data by
-                contacting us.{" "}
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-[15px] font-medium font-poppins text-black mb-1">
-                Updates
-              </h2>
-              <p className="text-[12px] font-regular font-poppins text-black">
-                We may update this policy from time to time. Changes will be
-                posted on this page.{" "}
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-[15px] font-medium font-poppins text-black mb-1">
-                Contact
-              </h2>
-              <p className="text-[12px] font-regular font-poppins text-black">
-                For questions, email us at: Support@devautox.com
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
       {/* footer */}
       <footer className="bg-[#E8FAFF] text-black px-6 py-10 md:px-20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">

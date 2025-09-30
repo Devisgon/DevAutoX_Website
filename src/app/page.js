@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation"; //instead of next/router
 import { useState } from "react";
 import { Poppins, Lexend } from "next/font/google";
-
+import { motion } from "framer-motion";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -108,7 +108,7 @@ export default function Home() {
               <span
                 className={`cursor-pointer text-[17px] ${
                   item.name === "Home"
-                    ? "font-bold text-black" // ✅ Home bold
+                    ? "font-bold text-black" // Home bold
                     : pathname === item.path
                     ? "text-black"
                     : "text-black hover:text-gray-600"
@@ -245,16 +245,22 @@ export default function Home() {
       </section>
 
       {/* services */}
-    <section className="py-12 bg-white text-center font-poppins">
+ 
+<section className="py-12 bg-white text-center font-poppins">
   <h2 className="text-2xl font-bold font-lexend text-black mb-10">
     Our Services
   </h2>
 
   <div className="flex flex-wrap justify-center gap-6">
     {services.map((service, index) => (
-      <div
+      <motion.div
         key={index}
         className="w-[220px] h-[330px] flex flex-col justify-between text-left rounded-2xl shadow-md p-5 bg-gradient-to-b from-[#9FDDEF] to-[#E8FBFF] hover:-translate-y-1 transition-transform"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.5 }}
+        whileHover={{ scale: 1.03 }}
       >
         <div>
           <Image
@@ -272,24 +278,21 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Learn More Link */}
         <Link
           href={service.link}
           className="mt-4 text-sm font-semibold font-poppins max-sm:text-center underline underline-offset-2 text-black hover:text-gray-700"
         >
           Learn More
         </Link>
-      </div>
+      </motion.div>
     ))}
   </div>
 </section>
-      {/* philosophy */}
-    <section className="py-12 px-6 bg-white md:px-16 lg:px-24">
-  {/* Heading + Description */}
+
+{/* Philosophy Section */}
+<section className="py-12 px-6 bg-white md:px-16 lg:px-24">
   <div className={`text-center max-w-3xl mx-auto ${lexend.className}`}>
-    <h2 className="text-[30px] font-semibold text-black">
-      Our Philosophy
-    </h2>
+    <h2 className="text-[30px] font-semibold text-black">Our Philosophy</h2>
     <div className="flex justify-center">
       <p className={`mt-4 text-center whitespace-pre-line text-[15px] ${poppins.className} text-black max-w-3xl`}>
         We are a team with bold ideas, passionate about automation, AI, and
@@ -303,93 +306,107 @@ export default function Home() {
         and built for long-term success.
       </p>
     </div>
+
   </div>
 
-  {/* Cards */}
-<div className="w-full flex flex-col md:flex-row items-center gap-y-6  justify-center gap-0 py-10 max-w-[1000px] mx-auto">
-  {/* Card 1 */}
-  <div className="relative w-[300px] h-[255px]  md:pl-29 flex flex-col items-center justify-center text-center p-1 md:pr-2">
-    <Image
-      src="/optimized-images/Polygon.webp"
-      alt="Card Background"
-      fill
-      className="object-contain md:pl-29 absolute inset-0"
-    />
-    <div className="relative z-10 flex flex-col items-center">
-      <Image
-        src="/optimized-images/speed.webp"
-        alt="Speed Icon"
-        width={26}
-        height={26}
-        className="mb-3"
-      />
-      <h3 className="text-[16px] font-medium font-poppins text-black mb-2">
-        Speed
-      </h3>
-      <p className="text-[14px] font-regular font-poppins text-gray-700 leading-relaxed">
-        To save time and <br />
-        reduce costs, we build <br />
-        smart, scalable, and <br />
-        automated solutions.
-      </p>
-    </div>
-  </div>
+  <div className="w-full flex flex-col md:flex-row items-center gap-y-6 justify-center gap-0 py-10 max-w-[1000px] mx-auto">
 
-  {/* Card 2 */}
-  <div className="relative w-[300px] h-[245px] max-sm:h-[255px] max-sm:w-[300px] flex flex-col items-center justify-center text-center p-4 md:px-1">
-    <Image
-      src="/optimized-images/Polygon.webp"
-      alt="Card Background"
-      fill
-      className="object-contain absolute inset-0"
-    />
-    <div className="relative z-10   mt-4 flex flex-col items-center">
+    {/* Card 1 */}
+    <motion.div
+      className="relative w-[300px] h-[255px] md:pl-29 flex flex-col items-center justify-center text-center p-1 md:pr-2"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.6}}
+      whileHover={{ scale: 1.03 }}
+    >
       <Image
-        src="/optimized-images/quality.webp"
-        alt="Quality Icon"
-        width={26}
-        height={26}
-        className="mb-3"
+        src="/optimized-images/Polygon.webp"
+        alt="Card Background"
+        fill
+        className="object-contain md:pl-29 absolute inset-0"
       />
-      <h3 className="text-[16px] font-medium font-poppins text-black mb-2">
-        Quality
-      </h3>
-      <p className="text-[14px] font-regular font-poppins text-gray-700 leading-relaxed">
-        We ensure every <br /> product we deliver is <br /> intuitive, reliable, and <br /> built for long-term <br /> success.
-      </p>
-    </div>
-  </div>
+      <div className="relative z-10 flex flex-col items-center">
+        <Image
+          src="/optimized-images/speed.webp"
+          alt="Speed Icon"
+          width={26}
+          height={26}
+          className="mb-3"
+        />
+        <h3 className="text-[16px] font-medium font-poppins text-black mb-2">Speed</h3>
+        <p className="text-[14px] font-regular font-poppins text-gray-700 leading-relaxed">
+          To save time and <br />
+          reduce costs, we build <br />
+          smart, scalable, and <br />
+          automated solutions.
+        </p>
+      </div>
+    </motion.div>
 
-  {/* Card 3 */}
-  <div className="relative w-[300px] h-[255px] md:pr-29 gap-y-6  flex flex-col items-center justify-center text-center p-4 md:pl-2">
-    <Image
-      src="/optimized-images/Polygon.webp"
-      alt="Card Background"
-      fill
-      className="object-contain md:pr-29 absolute inset-0"
-    />
-    <div className="relative z-10 flex flex-col items-center">
+    {/* Card 2 */}
+    <motion.div
+      className="relative w-[300px] h-[245px] max-sm:h-[255px] max-sm:w-[300px] flex flex-col items-center justify-center text-center p-4 md:px-1"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.6 }}
+      whileHover={{ scale: 1.03 }}
+    >
       <Image
-        src="/optimized-images/user.webp"
-        alt="User Icon"
-        width={26}
-        height={26}
-        className="mb-3"
+        src="/optimized-images/Polygon.webp"
+        alt="Card Background"
+        fill
+        className="object-contain absolute inset-0"
       />
-      <h3 className="text-[16px] font-medium font-poppins text-black mb-2">
-        User-First
-      </h3>
-      <p className="text-[14px] font-regular font-poppins text-gray-700 leading-relaxed">
-        We believe in a user- <br />
-        first approach to <br /> create impactful and <br /> functional projects.
-      </p>
-    </div>
-  </div>
+      <div className="relative z-10 mt-4 flex flex-col items-center">
+        <Image
+          src="/optimized-images/quality.webp"
+          alt="Quality Icon"
+          width={26}
+          height={26}
+          className="mb-3"
+        />
+        <h3 className="text-[16px] font-medium font-poppins text-black mb-2">Quality</h3>
+        <p className="text-[14px] font-regular font-poppins text-gray-700 leading-relaxed">
+          We ensure every <br /> product we deliver is <br /> intuitive, reliable, and <br /> built for long-term <br /> success.
+        </p>
+      </div>
+    </motion.div>
+
+    {/* Card 3 */}
+    <motion.div
+      className="relative w-[300px] h-[255px] md:pr-29 gap-y-6 flex flex-col items-center justify-center text-center p-4 md:pl-2"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.6 }}
+      whileHover={{ scale: 1.03 }}
+    >
+      <Image
+        src="/optimized-images/Polygon.webp"
+        alt="Card Background"
+        fill
+        className="object-contain md:pr-29 absolute inset-0"
+      />
+      <div className="relative z-10 flex flex-col items-center">
+        <Image
+          src="/optimized-images/user.webp"
+          alt="User Icon"
+          width={26}
+          height={26}
+          className="mb-3"
+        />
+        <h3 className="text-[16px] font-medium font-poppins text-black mb-2">User-First</h3>
+        <p className="text-[14px] font-regular font-poppins text-gray-700 leading-relaxed">
+          We believe in a user- <br />
+          first approach to <br /> create impactful and <br /> functional projects.
+        </p>
+      </div>
+    </motion.div>
 
   </div>
 </section>
-
-
       {/* stack */}
       <section
         className="relative w-full py-12 px-4 flex flex-col items-center justify-center"
@@ -577,12 +594,12 @@ export default function Home() {
 
           <div className="mt-8">
             <Link
-              href="/contact"
-              className="inline-block w-[215px] h-[50px] bg-[#65C8E3] text-white text-[20px] font-semibold rounded-full hover:bg-[#65C8E3] transition-colors duration-200 pt-2.5 items-center justify-center"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
-              Get In Touch
-            </Link>
+  href="/contact"
+  className="inline-flex w-[215px] h-[50px] bg-[#65C8E3] text-white text-[20px] font-semibold rounded-full hover:bg-[#65C8E3] transition-colors duration-200 items-center justify-center"
+  style={{ fontFamily: "Poppins, sans-serif" }}
+>
+  Get In Touch
+</Link>
           </div>
         </div>
       </section>
