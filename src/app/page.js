@@ -645,12 +645,11 @@ export default function Home() {
 </Link>
 
             {/* Description */}
-            <p className="text-[12px] font-medium whitespace-nowrap font-[Poppins] mb-2">
+             <p className="text-[12px] font-medium whitespace-nowrap font-Poppins mb-2">
               We are a team dedicated to speed, quality, and user-first <br />{" "}
               design, ensuring every product is intuitive, reliable, and built
               <br /> for long-term success.
             </p>
-
             {/* Contact */}
             <address className="not-italic text-[11px] font-semibold font-[Poppins] mb-4">
               support@devautox.com
