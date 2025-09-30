@@ -245,14 +245,14 @@ export default function Home() {
   </div>
 
   {/* Hero Content */}
-  <div className="max-w-3xl mx-auto px-6 py-32 md:py-48 relative z-10">
-    <h1 className="mb-4 leading-snug font-bold text-[40px] max-xs:text-[17px] max-sm:text-[16px]">
+<div className="max-w-3xl text-center justify-center mx-auto px-6 py-32 md:py-48">
+      <h1 className="mb-4 leading-snug font-bold text-[40px] ${lexend.className} max-xs:text-[17px]  font-bold text-[40px] max-xs:text-[17px] max-sm:text-[16px]">
       <span className="whitespace-nowrap max-sm:pr-2">Building Smart, Scalable & Automated</span>
       <br />
       <span className="whitespace-nowrap">Solutions for Your Business</span>
     </h1>
 
-    <p className="text-gray-800 mb-6 md:whitespace-nowrap text-[20px] max-sm:text-[16px]">
+    <p className="text-gray-800 mb-6 md:whitespace-nowrap text-[20px] max-sm:text-[12px] font-medium ${poppins.className} max-sm:pr-2 max-sm:text-[16px]">
       At DevAutoX, we craft digital solutions that save time, cut costs,
       and drive growth<br />
       by combining cutting-edge technology with practical business needs.
@@ -271,7 +271,7 @@ export default function Home() {
       {/* services */}
  
 <section className="py-12 bg-white text-center font-poppins">
-  <h2 className="text-2xl font-bold font-lexend text-black mb-10">
+  <h2 className="text-[30px] font-semibold font-lexend text-black mb-10">
     Our Services
   </h2>
 
@@ -297,7 +297,7 @@ export default function Home() {
           <h3 className="text-[14px] text-center whitespace-nowrap font-bold font-lexend text-black mb-2">
             {service.title}
           </h3>
-          <p className="text-[12px] text-black text-center justify-center leading-relaxed font-poppins">
+          <p className="text-[12px]  text-black max-sm:text-center md:text-justify leading-relaxed font-poppins">
             {service.desc}
           </p>
         </div>
@@ -358,8 +358,8 @@ export default function Home() {
           height={26}
           className="mb-3"
         />
-        <h3 className="text-[16px] font-medium font-poppins text-black mb-2">Speed</h3>
-        <p className="text-[14px] font-regular font-poppins text-gray-700 leading-relaxed">
+        <h3 className="text-[16px] font-bold font-poppins text-black mb-2">Speed</h3>
+        <p className="text-[14px] font-regular font-poppins text-black leading-relaxed">
           To save time and <br />
           reduce costs, we build <br />
           smart, scalable, and <br />
@@ -391,8 +391,8 @@ export default function Home() {
           height={26}
           className="mb-3"
         />
-        <h3 className="text-[16px] font-medium font-poppins text-black mb-2">Quality</h3>
-        <p className="text-[14px] font-regular font-poppins text-gray-700 leading-relaxed">
+        <h3 className="text-[16px] font-bold font-poppins text-black mb-2">Quality</h3>
+        <p className="text-[14px] font-regular font-poppins text-black leading-relaxed">
           We ensure every <br /> product we deliver is <br /> intuitive, reliable, and <br /> built for long-term <br /> success.
         </p>
       </div>
@@ -421,8 +421,8 @@ export default function Home() {
           height={26}
           className="mb-3"
         />
-        <h3 className="text-[16px] font-medium font-poppins text-black mb-2">User-First</h3>
-        <p className="text-[14px] font-regular font-poppins text-gray-700 leading-relaxed">
+        <h3 className="text-[16px] font-bold font-poppins text-black mb-2">User-First</h3>
+        <p className="text-[14px] font-regular font-poppins text-black leading-relaxed">
           We believe in a user- <br />
           first approach to <br /> create impactful and <br /> functional projects.
         </p>

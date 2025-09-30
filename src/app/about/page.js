@@ -98,7 +98,7 @@ const cardData = [
   {
     heading: 'Lead with Innovation',
     subheading: <>Our vision is to be a leader<br/> in web solutions, recognized<br/> for our bold and user<br/>-centric ideas.</>,
-    number: '04',
+    number: '01',
        icon: '/optimized-images/innovation1.webp',
 
     dotted: '/optimized-images/line.webp',
@@ -106,7 +106,7 @@ const cardData = [
   {
     heading: 'Create Impact',
     subheading: <>Help businesses transform <br/>the way they work with<br/> visionary and practical<br/> technology.</>,
-    number: '05',
+    number: '02',
       icon: '/optimized-images/impact.webp',
 
     dotted: '/optimized-images/line.webp',
@@ -114,7 +114,7 @@ const cardData = [
   {
     heading: 'Achieve Potential',
     subheading: <>We continuously innovate<br/> and expand our expertise to<br/> help clients reach their full<br/> potential and succeed.</>,
-    number: '06',
+    number: '03',
        icon: '/optimized-images/potential.webp',
 
     dotted: '/optimized-images/line.webp',
@@ -423,7 +423,7 @@ const cardData = [
             challenges. We are committed to <strong>Quality,</strong> ensuring
             every solution is reliable and built for long-term success. Our
             genuine <strong>Collaboration</strong> with clients creates truly
-            transformative technology. We operate with <strong>Integrity,</strong>{" "}
+            transformative technology. We operate with Integrity,{" "}
             building lasting trust. We are focused on <strong>Growth,</strong>{" "}
             both for our team and for our clients. Ultimately, we stand for{" "}
             <strong>Reliability,</strong> delivering on our promises.
