@@ -124,10 +124,10 @@ export default function About() {
             href={item.path}
             onClick={() => setMenuOpen(false)}
           >
-            <span
+           <span
               className={`cursor-pointer text-[17px] ${
-               item.name === "Contact"
-                        ? "font-bold text-black" //  
+                item.path === "/contact"
+                  ? "font-bold text-black"
                   : pathname === item.path
                   ? "text-black"
                   : "text-black hover:text-gray-600"
