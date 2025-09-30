@@ -21,7 +21,21 @@ html, body {
 }
 
 
+@keyframes wave {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
+.wave {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.wave-fast { animation: wave 3s linear infinite; opacity: 0.95; }
+.wave-mid  { animation: wave 6s linear infinite; opacity: 0.85; }
+.wave-slow { animation: wave 12s linear infinite; opacity: 0.75; }
+
+.wave-svg { display: block; width: 200%; height: 100%; }
 
 :root {
   --background: #ffffff;

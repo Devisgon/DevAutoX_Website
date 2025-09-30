@@ -196,53 +196,77 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative w-full text-center justify-center justify-items-center text-black">
-        {/* Background Image */}
-        <div className="absolute bg-white inset-0 -z-10">
-          <Image
-            src="/optimized-images/hero-bg.webp"
-            alt="Background"
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
-        </div>
+  <section className="relative w-full text-center text-black overflow-hidden">
+  {/* Gradient background */}
+  <div className="absolute inset-0 -z-10">
+    <div className="absolute inset-0 bg-gradient-to-b from-[#eaf9fb] via-[#bfeef4] to-[#3EB9E7]" />
 
-        {/* Hero Content */}
-        <div className="max-w-3xl text-center justify-center  mx-auto px-6 py-32 md:py-48">
-          <h1
-            className={`mb-4 leading-snug  font-bold text-[40px] ${lexend.className} max-xs:text-[17px] max-sm:text-[16px]`}
-          >
-            <span className="whitespace-nowrap max-sm:pr-2">
-              Building Smart, Scalable & Automated
-            </span>
-            <br />
-            <span className="whitespace-nowrap">
-              Solutions for Your Business
-            </span>
-          </h1>
-          <p
-            className={`text-gray-800 mb-6 md:whitespace-nowrap text-[20px] max-sm:text-[12px] font-medium ${poppins.className} max-sm:pr-2 max-sm:text-[16px]`}
-          >
-           
-              At DevAutoX, we craft digital solutions that save time, cut costs,
-              and drive growth<br/>
-          
-            
-              by combining cutting-edge technology with practical business
-              needs.
-          
-          </p>
+    {/* Waves */}
+    <div className="absolute bottom-0 left-0 w-full h-44 overflow-hidden pointer-events-none">
+      {/* Back slow wave */}
+      <svg
+        className="absolute left-0 bottom-0 wave-svg wave-slow"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,60 C300,140 900,0 1200,60 V120 H0 Z"
+          fill="#ffffff"
+        ></path>
+      </svg>
 
-         <Link href="/contact">
-  <button
-    className="bg-white text-black font-bold text-[18px] py-3 px-6 rounded-full shadow hover:shadow-lg transition font-inter max-sm:text-[16px]"
-  >
-    Let’s Build Together
-  </button>
-</Link>
-        </div>
-      </section>
+      {/* Mid wave */}
+      <svg
+        className="absolute left-0 bottom-0 wave-svg wave-mid"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,80 C400,160 800,20 1200,80 V120 H0 Z"
+          fill="#ffffff"
+        ></path>
+      </svg>
+
+      {/* Front fast wave */}
+      <svg
+        className="absolute left-0 bottom-0 wave-svg wave-fast"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,40 C500,100 700,20 1200,50 V120 H0 Z"
+          fill="#ffffff"
+        ></path>
+      </svg>
+    </div>
+  </div>
+
+  {/* Hero Content */}
+  <div className="max-w-3xl mx-auto px-6 py-32 md:py-48 relative z-10">
+    <h1 className="mb-4 leading-snug font-bold text-[40px] max-xs:text-[17px] max-sm:text-[16px]">
+      <span className="whitespace-nowrap max-sm:pr-2">Building Smart, Scalable & Automated</span>
+      <br />
+      <span className="whitespace-nowrap">Solutions for Your Business</span>
+    </h1>
+
+    <p className="text-gray-800 mb-6 md:whitespace-nowrap text-[20px] max-sm:text-[16px]">
+      At DevAutoX, we craft digital solutions that save time, cut costs,
+      and drive growth<br />
+      by combining cutting-edge technology with practical business needs.
+    </p>
+
+    <Link href="/contact">
+      <button className="bg-white text-black font-bold text-[18px] py-3 px-6 rounded-full shadow hover:shadow-lg transition max-sm:text-[16px]">
+        Let’s Build Together
+      </button>
+    </Link>
+  </div>
+</section>
+
+
 
       {/* services */}
  
