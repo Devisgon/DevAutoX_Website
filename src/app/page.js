@@ -634,24 +634,32 @@ export default function Home() {
 
             {/* Social Icons */}
             <div className="flex gap-4">
-              <Image
-                src="/optimized-images/Linkedin.webp"
-                alt="Facebook"
-                width={28}
-                height={28}
-              />
-              <Image
-                src="/optimized-images/Facebook.webp"
-                alt="Twitter"
-                width={28}
-                height={28}
-              />
-              <Image
-                src="/optimized-images/Instagram.webp"
-                alt="LinkedIn"
-                width={28}
-                height={28}
-              />
+              <Link href="https://www.linkedin.com/company/devautox" target="_blank" rel="noopener noreferrer">
+    <Image
+      src="/optimized-images/Linkedin.webp"
+      alt="LinkedIn"
+      width={28}
+      height={28}
+    />
+  </Link>
+
+  <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+    <Image
+      src="/optimized-images/Facebook.webp"
+      alt="Facebook"
+      width={28}
+      height={28}
+    />
+  </Link>
+
+  <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+    <Image
+      src="/optimized-images/Instagram.webp"
+      alt="Instagram"
+      width={28}
+      height={28}
+    />
+  </Link>
             </div>
           </div>
 
