@@ -126,8 +126,8 @@ export default function About() {
           >
             <span
               className={`cursor-pointer text-[17px] ${
-                item.path === "/contact"
-                  ? "font-bold /contact"
+               item.name === "Contact"
+                        ? "font-bold text-black" //  
                   : pathname === item.path
                   ? "text-black"
                   : "text-black hover:text-gray-600"

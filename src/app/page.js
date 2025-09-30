@@ -180,7 +180,7 @@ export default function Home() {
                   <span
                     className={`cursor-pointer text-[17px] ${
                       item.name === "Home"
-                        ? "font-bold text-black" // ✅ Home bold
+                        ? "font-bold text-black" //  Home bold
                         : pathname === item.path
                         ? "text-black"
                         : "text-black hover:text-gray-600"
