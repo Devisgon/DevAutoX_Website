@@ -620,8 +620,8 @@ export default function Home() {
             that move your business forward.
           </p>
 
-          <div className="mt-8 relative z-10">
-            <Link href="/contact" className="inline-flex w-[215px] h-[50px] bg-[#65C8E3] text-white text-[20px] font-semibold rounded-full hover:bg-[#65C8E3] transition-colors duration-200 items-center justify-center"
+          <div className="mt-8 relative z-10 inline-flex w-[215px] h-[50px] bg-[#65C8E3] text-white text-[20px] font-semibold rounded-full hover:bg-[#65C8E3] transition-colors duration-200 items-center justify-center">
+            <Link href="/contact" className=""
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Get In Touch
