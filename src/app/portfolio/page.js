@@ -622,7 +622,7 @@ export default function About() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
         >
           <Link
-            href="https://www.upwork.com/"
+            href="https://www.upwork.com/agencies/devautox/"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-flex items-center text-[#25A3E5] underline text-[15px] font-medium font-poppins"
@@ -694,7 +694,7 @@ export default function About() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
             >
               <Link
-                href="https://www.upwork.com/"
+                href="https://www.upwork.com/agencies/devautox/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-sm font-medium text-black hover:text-sky-700 transition"
