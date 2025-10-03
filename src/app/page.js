@@ -621,12 +621,12 @@ export default function Home() {
           </p>
 
           <div className="mt-8">
-            <Link
-              href="/contact"
-              className="inline-flex w-[215px] h-[50px] bg-[#65C8E3] text-white text-[20px] font-semibold rounded-full hover:bg-[#65C8E3] transition-colors duration-200 items-center justify-center"
+            <Link href="/contact">
+              <button className="inline-flex w-[215px] h-[50px] bg-[#65C8E3] text-white text-[20px] font-semibold rounded-full hover:bg-[#65C8E3] transition-colors duration-200 items-center justify-center"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Get In Touch
+                </button>
             </Link>
           </div>
         </div>
